@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ana Laura Carvalho Carnib · Designer</title>
+<meta name="description" content="Portfólio de Ana Laura Carvalho Carnib, designer gráfica e digital: identidade visual, UI/UX, design de posts, reels e impressos.">
+<meta property="og:title" content="Ana Laura Carvalho Carnib · Designer">
+<meta property="og:description" content="Identidade visual, UI/UX, design de posts, reels e impressos.">
+<meta property="og:image" content="img/ana-horizontal.jpg">
+<link rel="icon" type="image/png" href="img/logo/monograma-ac.png">
+<link rel="apple-touch-icon" href="img/logo/monograma-ac.png">
+<link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><polygon fill='%23AACA6E' points='100,0 121,49.2 170.7,29.3 150.8,79 200,100 150.8,121 170.7,170.7 121,150.8 100,200 79,150.8 29.3,170.7 49.2,121 0,100 49.2,79 29.3,29.3 79,49.2'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roxo:#6A378D; --lilas:#E5BFFF; --verde:#6D8344; --verde2:#AACA6E;
+  --creme:#FCFADE; --marrom:#463A3A; --branco:#FFFEF5;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --script:'Mrs Saint Delafield','Brush Script MT',cursive;
+  --wrap:1180px;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--sans);color:var(--marrom);background:var(--creme);line-height:1.6;font-size:1rem;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.1;font-weight:700}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+.script{font-family:var(--script);font-weight:400;line-height:1}
+:focus-visible{outline:3px solid var(--verde2);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font:600 .98rem/1 var(--sans);padding:1rem 1.5rem;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-verde{background:var(--verde2);color:var(--roxo);box-shadow:4px 4px 0 var(--marrom)}
+.btn-verde:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--marrom)}
+.btn-linha{border-color:currentColor;color:var(--creme)}
+.btn-linha:hover{background:var(--creme);color:var(--roxo)}
+.btn-roxo{background:var(--roxo);color:var(--creme);box-shadow:4px 4px 0 var(--verde2)}
+.btn-roxo:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--verde2)}
+
+/* ---------- header ---------- */
+.topo{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:2px solid var(--marrom);padding-top:env(safe-area-inset-top,0px)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.logo{display:block;flex:none;line-height:0}
+.logo img{height:44px;width:auto}
+@media (max-width:480px){.logo img{height:34px}.lang button{padding:.4rem .55rem}}
+.menu{display:flex;align-items:center;gap:.25rem;list-style:none;margin:0;padding:0}
+.menu>li{position:relative}
+.menu a,.menu button.lk{display:block;padding:.55rem .85rem;border-radius:999px;font:500 .95rem var(--sans);text-decoration:none;color:var(--marrom);background:none;border:0;cursor:pointer}
+.menu a:hover,.menu button.lk:hover{background:var(--lilas);color:var(--roxo)}
+.sub{position:absolute;top:calc(100% + .4rem);left:0;min-width:220px;background:var(--branco);border:2px solid var(--marrom);border-radius:18px;padding:.45rem;list-style:none;margin:0;box-shadow:5px 5px 0 var(--roxo);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.18s}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{opacity:1;visibility:visible;transform:none}
+.sub a{border-radius:12px;padding:.55rem .8rem}
+.lang{display:flex;border:2px solid var(--marrom);border-radius:999px;overflow:hidden;flex:none}
+.lang button{font:600 .78rem var(--sans);background:none;border:0;padding:.45rem .7rem;cursor:pointer;color:var(--marrom)}
+.lang button[aria-pressed="true"]{background:var(--roxo);color:var(--creme)}
+.burger{display:none;background:none;border:2px solid var(--marrom);border-radius:12px;width:44px;height:44px;cursor:pointer;color:var(--marrom)}
+.burger svg{width:22px;height:22px}
+.right{display:flex;align-items:center;gap:.75rem}
+@media (max-width:900px){
+  .burger{display:grid;place-items:center}
+  .nav{position:fixed;inset:calc(72px + env(safe-area-inset-top,0px)) 0 auto 0;background:var(--creme);border-bottom:2px solid var(--marrom);padding:1rem clamp(1.1rem,4vw,2.5rem) 1.5rem;display:none;max-height:calc(100vh - 72px);overflow:auto}
+  .nav.open{display:block}
+  .menu{flex-direction:column;align-items:stretch}
+  .menu a,.menu button.lk{font-size:1.1rem;padding:.8rem 1rem}
+  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:none;padding:0 0 0 1rem;display:none}
+  .has-sub.open .sub{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--roxo);color:var(--creme);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:2rem;min-height:min(86vh,760px);padding-top:3rem;padding-bottom:3rem}
+.hero .ola{font-size:clamp(2.6rem,6vw,4.2rem);color:var(--lilas);display:block;margin-bottom:-.4rem}
+.hero .nome{font-weight:500;font-size:clamp(1.05rem,2.2vw,1.45rem);letter-spacing:.02em}
+.hero h1{font-weight:800;font-size:clamp(3.4rem,10vw,8.2rem);line-height:.86;letter-spacing:-.03em;margin:.4rem 0 1.4rem;color:var(--creme)}
+.hero .intro{max-width:34rem;font-size:clamp(1rem,1.5vw,1.12rem);font-weight:300;color:#F3EEDB}
+.hero .intro strong{font-weight:600;color:var(--verde2)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+.foto-hero{position:relative;aspect-ratio:4/5;max-width:440px;width:100%;justify-self:center}
+.foto-hero .burst{position:absolute;inset:-14% -18% -8% -18%;width:136%;height:122%;fill:var(--verde2);animation:gira 60s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.foto-hero .moldura{position:absolute;inset:0;border-radius:999px 999px 28px 28px;overflow:hidden;border:3px solid var(--creme);background:#ddd}
+.foto-hero .moldura img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.3);transform-origin:50% 28%}
+.balao{position:absolute;left:-12%;top:8%;background:var(--creme);color:var(--roxo);padding:.9rem 1.1rem;border-radius:20px 20px 20px 4px;max-width:210px;font-size:.84rem;line-height:1.35;box-shadow:4px 4px 0 var(--marrom);transform:rotate(-4deg)}
+.selo{position:absolute;right:-10%;bottom:8%;width:168px;height:168px;display:grid;place-items:center;text-align:center}
+.selo svg{position:absolute;inset:0;fill:var(--lilas)}
+.selo span{position:relative;color:var(--roxo);font-weight:700;font-size:.74rem;line-height:1.15;max-width:82px;display:block}
+.selo span span{font-size:.72rem}
+.selo b{display:block;font-size:1.9rem;font-weight:800;line-height:1}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;min-height:auto;padding-top:2.5rem}
+  .foto-hero{max-width:330px;margin:2.5rem auto 1rem}
+  .balao{left:-6%}
+  .selo{right:-6%;width:148px;height:148px}
+}
+
+/* ---------- faixa ---------- */
+.faixa{background:var(--verde2);color:var(--roxo);border-block:2px solid var(--marrom);overflow:hidden;white-space:nowrap}
+.faixa .trilho{display:inline-flex;gap:1.6rem;align-items:center;padding:.95rem 0;animation:corre 38s linear infinite;font-weight:700;font-size:clamp(1rem,2vw,1.3rem)}
+.faixa svg{width:22px;height:22px;fill:var(--roxo);flex:none}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* ---------- seções ---------- */
+section{padding:clamp(4rem,9vw,7rem) 0}
+.titulo{position:relative;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;align-items:flex-end;column-gap:1rem}
+.titulo .sub-t{flex-basis:100%}
+.titulo h2{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;color:var(--roxo);letter-spacing:-.02em}
+.titulo .script{font-size:clamp(2.4rem,5.5vw,3.8rem);color:var(--verde);transform:rotate(-6deg) translateY(.6rem);white-space:nowrap}
+.titulo p.sub-t{margin-top:.8rem;max-width:40rem}
+
+/* ---------- projetos ---------- */
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.4rem}
+.filtros button{font:500 .93rem var(--sans);padding:.6rem 1.15rem;border-radius:999px;border:2px solid var(--marrom);background:transparent;color:var(--marrom);cursor:pointer;transition:.15s}
+.filtros button:hover{background:var(--lilas)}
+.filtros button[aria-pressed="true"]{background:var(--roxo);border-color:var(--roxo);color:var(--creme)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--branco);border:2px solid var(--marrom);border-radius:26px 26px 26px 6px;overflow:hidden;box-shadow:6px 6px 0 var(--roxo);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--roxo)}
+.card:nth-child(3n+2){box-shadow:6px 6px 0 var(--verde)}
+.card:nth-child(3n+2):hover{box-shadow:9px 9px 0 var(--verde)}
+.card:nth-child(3n+3){box-shadow:6px 6px 0 var(--verde2)}
+.card:nth-child(3n+3):hover{box-shadow:9px 9px 0 var(--verde2)}
+.capa{position:relative;aspect-ratio:4/3;overflow:hidden;border-bottom:2px solid var(--marrom)}
+.capa img,.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .capa img{transform:scale(1.04)}
+.ph-art{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:var(--lilas);color:var(--roxo);overflow:hidden}
+.ph-art svg{position:absolute;width:70%;max-width:260px;fill:var(--branco);opacity:.55}
+.ph-art span{position:relative;font-family:var(--script);font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;padding:0 1rem}
+.ph-art.ph-verde{background:var(--verde2)}
+.ph-art.ph-verde svg{fill:var(--creme)}
+.ph-art.ph-roxo{background:var(--roxo);color:var(--creme)}
+.ph-art.ph-roxo svg{fill:var(--lilas);opacity:.3}
+.card .info{padding:1.25rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.tag{align-self:flex-start;font-size:.75rem;font-weight:600;background:var(--verde2);color:var(--roxo);padding:.3rem .75rem;border-radius:999px}
+.card h3{font-size:1.4rem;font-weight:700;color:var(--roxo)}
+.card p{font-size:.93rem}
+.card .ver{margin-top:auto;padding-top:.6rem;font-weight:600;font-size:.9rem;color:var(--verde);display:flex;align-items:center;gap:.4rem}
+.card .ver svg{width:16px;height:16px;transition:transform .2s}
+.card:hover .ver svg{transform:translateX(4px)}
+
+/* ---------- sobre ---------- */
+.sobre{background:var(--branco);border-block:2px solid var(--marrom)}
+.sobre-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.foto-sobre{position:sticky;top:110px;max-width:400px}
+.foto-sobre .fundo{position:absolute;inset:6% -8% -6% 8%;background:var(--lilas);border-radius:40px 40px 40px 120px}
+.foto-sobre img{position:relative;border-radius:28px 28px 28px 110px;border:2px solid var(--marrom);aspect-ratio:3/4;object-fit:cover;object-position:50% 25%;width:100%}
+.foto-sobre .script{position:absolute;bottom:-1.4rem;right:-1rem;font-size:3rem;color:var(--roxo);transform:rotate(-8deg)}
+.sobre-txt .lead{font-size:clamp(1.15rem,2vw,1.4rem);font-weight:500;color:var(--roxo);line-height:1.45;margin-bottom:1rem;max-width:38rem}
+.sobre-txt p{max-width:38rem}
+.numeros{display:flex;flex-wrap:wrap;gap:1rem;margin:2rem 0}
+.numeros div{border:2px solid var(--marrom);border-radius:999px;padding:.6rem 1.2rem;display:flex;align-items:baseline;gap:.5rem;font-size:.92rem}
+.numeros b{font-size:1.5rem;font-weight:800;color:var(--roxo)}
+.bloco{margin-top:2.6rem}
+.bloco h3{font-size:1.35rem;color:var(--roxo);margin-bottom:1.2rem}
+.linha-tempo{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:3px solid var(--roxo)}
+.linha-tempo li{position:relative;padding-bottom:1.6rem}
+.linha-tempo li:last-child{padding-bottom:0}
+.linha-tempo li::before{content:"";position:absolute;left:calc(-1.6rem - 10px);top:.3rem;width:17px;height:17px;border-radius:50%;background:var(--roxo);border:3px solid var(--branco);box-shadow:0 0 0 2px var(--roxo)}
+.linha-tempo li:first-child::before{background:var(--verde2)}
+.linha-tempo .cargo{font-weight:700;color:var(--verde);font-size:1.05rem}
+.linha-tempo .onde{font-weight:600;font-size:.95rem}
+.linha-tempo p{font-size:.92rem;margin-top:.25rem;max-width:36rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chips span{background:var(--verde2);color:var(--marrom);padding:.45rem 1rem;border-radius:999px;font-size:.9rem}
+.chips.lilas span{background:var(--lilas)}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media (max-width:900px){.sobre-grid{grid-template-columns:1fr}.foto-sobre{position:relative;top:0;margin:0 auto 2rem;max-width:320px}.duas{grid-template-columns:1fr}}
+
+/* ---------- serviços ---------- */
+.servicos{background:var(--lilas)}
+.servicos .titulo .script{color:var(--roxo)}
+.lista-serv{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.4rem}
+.serv{background:var(--creme);border:2px solid var(--marrom);border-radius:24px;padding:1.6rem 1.6rem 1.7rem;display:grid;grid-template-columns:58px 1fr;gap:1.1rem;align-items:start}
+.serv .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--roxo);color:var(--creme)}
+.serv:nth-child(2n) .ic{background:var(--verde);}
+.serv .ic svg{width:28px;height:28px}
+.serv h3{font-size:1.2rem;color:var(--roxo);margin-bottom:.35rem}
+.serv p{font-size:.93rem}
+.serv ul{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}
+.serv li{font-size:.78rem;border:1.5px solid var(--marrom);border-radius:999px;padding:.2rem .65rem}
+.cta-serv{margin-top:2.6rem;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+.cta-serv .script{font-size:2.8rem;color:var(--roxo)}
+
+/* ---------- currículo ---------- */
+.cv{background:var(--roxo);color:var(--creme);padding:0;overflow:hidden}
+.cv .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem}
+.cv-txt{padding:clamp(3.5rem,7vw,5.5rem) 0}
+.cv-txt .script{font-size:clamp(2.6rem,5vw,3.6rem);color:var(--lilas);display:block}
+.cv-txt h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;margin:.2rem 0 1rem}
+.cv-txt p{max-width:30rem;margin-bottom:2rem;color:#F3EEDB}
+.cv-txt .acoes{display:flex;flex-wrap:wrap;gap:.9rem}
+.cv-foto{position:relative;align-self:end;height:100%;min-height:360px}
+.cv-foto svg{position:absolute;width:90%;right:-10%;bottom:-20%;fill:var(--verde2)}
+.cv-foto img{position:absolute;bottom:0;right:0;width:100%;height:92%;object-fit:cover;object-position:50% 20%;border-radius:200px 200px 0 0;border:3px solid var(--creme);border-bottom:0}
+@media (max-width:900px){.cv .wrap{grid-template-columns:1fr}.cv-txt{padding-bottom:1rem}.cv-foto{min-height:340px;max-width:380px;width:100%;justify-self:center}}
+
+/* ---------- contato ---------- */
+.contato .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.contato .grande{font-family:var(--script);font-weight:400;font-size:clamp(3.4rem,9vw,6.4rem);color:var(--roxo);line-height:.9;margin-bottom:1.5rem}
+.contato p.txt{max-width:32rem;margin-bottom:2rem}
+.canais{display:grid;gap:.8rem}
+.canal{display:flex;align-items:center;gap:1rem;text-decoration:none;border:2px solid var(--marrom);border-radius:20px;padding:.9rem 1.2rem;background:var(--branco);transition:.15s;word-break:break-word}
+.canal:hover{background:var(--verde2)}
+.canal .ic{width:42px;height:42px;border-radius:12px;background:var(--roxo);color:var(--creme);display:grid;place-items:center;flex:none}
+.canal .ic svg{width:20px;height:20px}
+.canal small{display:block;font-size:.76rem;color:var(--verde);font-weight:600}
+.canal span{font-weight:500}
+.contato .foto{position:relative}
+.contato .foto img{width:100%;border-radius:28px;border:2px solid var(--marrom);aspect-ratio:1;object-fit:cover;box-shadow:8px 8px 0 var(--verde2)}
+@media (max-width:900px){.contato .wrap{grid-template-columns:1fr}.contato .foto{max-width:320px}}
+
+footer{background:var(--roxo);color:var(--creme);padding:3rem 0 calc(2rem + env(safe-area-inset-bottom,0px));font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-end}
+.logo-rodape img{width:clamp(150px,20vw,210px);height:auto}
+.rodape-dir{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;text-align:right}
+.rodape-links{display:flex;flex-wrap:wrap;gap:.3rem 1.3rem;justify-content:flex-end}
+.rodape-links a{text-decoration:none;font-weight:500}
+.rodape-links a:hover{color:var(--verde2)}
+.rodape-sociais{display:flex;gap:.6rem}
+.rodape-sociais a{width:42px;height:42px;border-radius:50%;border:2px solid var(--creme);display:grid;place-items:center}
+.rodape-sociais a:hover{background:var(--verde2);border-color:var(--verde2);color:var(--roxo)}
+.rodape-links a:hover{color:var(--verde2)}
+.rodape-sociais svg{width:20px;height:20px}
+footer small{opacity:.8}
+@media (max-width:640px){.rodape-dir{align-items:flex-start;text-align:left}.rodape-links{justify-content:flex-start}}
+
+/* ---------- página de projeto ---------- */
+#detalhe{display:none}
+body.vendo-projeto #home{display:none}
+body.vendo-projeto #detalhe{display:block}
+.d-topo{padding:2.5rem 0 0;color:var(--creme);background:var(--roxo);position:relative;overflow:hidden}
+.d-topo.c-verde{background:var(--verde)}
+.d-topo.c-lilas{background:var(--lilas);color:var(--roxo)}
+.voltar{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;font-size:.92rem;padding:.5rem 1rem;border:2px solid currentColor;border-radius:999px}
+.voltar svg{width:16px;height:16px}
+.voltar:hover{background:var(--creme);color:var(--roxo)}
+.d-cab{display:grid;grid-template-columns:1fr auto;align-items:end;gap:1.5rem;margin:2.2rem 0 2.2rem}
+.d-cab .tag{background:var(--verde2);color:var(--roxo);margin-bottom:1rem;display:inline-block}
+.d-cab h1{font-size:clamp(2.8rem,8vw,6rem);font-weight:800;letter-spacing:-.03em;line-height:.92}
+.d-cab .script{font-size:clamp(2rem,4.5vw,3.2rem);color:var(--verde2);display:block;margin-top:.4rem}
+.d-topo.c-lilas .d-cab .script{color:var(--verde)}
+.d-topo.c-verde .d-cab .script{color:var(--lilas)}
+.d-cab svg.estrela{width:clamp(70px,10vw,120px);fill:var(--verde2)}
+.d-topo.c-verde .d-cab svg.estrela{fill:var(--lilas)}
+.d-capa{position:relative;aspect-ratio:16/8;border-radius:28px 28px 0 0;overflow:hidden;border:2px solid var(--marrom);border-bottom:0}
+.d-capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.d-corpo{padding:clamp(3rem,6vw,5rem) 0}
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:3.5rem}
+.ficha div{border:2px solid var(--marrom);border-radius:18px;padding:1rem 1.2rem;background:var(--branco)}
+.ficha dt{font-size:.78rem;font-weight:600;color:var(--verde)}
+.ficha dd{margin:.2rem 0 0;font-weight:600;color:var(--roxo)}
+.d-resumo{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:500;color:var(--roxo);max-width:46rem;line-height:1.45;margin-bottom:3.5rem}
+.etapas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3.5rem;counter-reset:et}
+.etapa{padding:1.6rem;border-radius:24px;background:var(--branco);border:2px solid var(--marrom);position:relative}
+.etapa::before{counter-increment:et;content:counter(et);position:absolute;top:-18px;left:1.4rem;width:36px;height:36px;border-radius:50%;background:var(--roxo);color:var(--creme);display:grid;place-items:center;font-weight:700;font-size:.95rem;border:2px solid var(--marrom)}
+.etapa:nth-child(2)::before{background:var(--verde)}
+.etapa:nth-child(3)::before{background:var(--verde2);color:var(--roxo)}
+.etapa h3{font-size:1.2rem;color:var(--roxo);margin:.5rem 0 .6rem}
+.etapa p{font-size:.95rem}
+.passos{margin:-1.5rem 0 3.5rem}
+.passos h3{font-size:1.1rem;color:var(--roxo);margin-bottom:.9rem}
+@media (max-width:900px){.etapas{grid-template-columns:1fr;gap:2rem}}
+.galeria-tit{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--roxo);margin-bottom:1.5rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.gallery.vertical{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.tile{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:2px solid var(--marrom);background:var(--branco);cursor:zoom-in;padding:0}
+.gallery.vertical .tile{aspect-ratio:9/16}
+.gallery .tile:first-child{grid-column:span 2;aspect-ratio:16/9}
+.gallery.vertical .tile:first-child{grid-column:auto;aspect-ratio:9/16}
+@media (max-width:640px){.gallery .tile:first-child{grid-column:auto;aspect-ratio:4/3}}
+.tile .ph-art span{font-size:2rem}
+.tile.ph{cursor:default}
+.gallery.has-img .tile.ph{display:none}
+.gallery:not(.has-img) .tile.ph:nth-child(n+6){display:none}
+.links-proj{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.8rem}
+.proximo{margin-top:clamp(3.5rem,7vw,5rem);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;border-top:2px solid var(--marrom);padding-top:2rem}
+.proximo a.nx{text-decoration:none;text-align:right;margin-left:auto}
+.proximo .nx small{display:block;font-size:.85rem;color:var(--verde);font-weight:600}
+.proximo .nx b{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:var(--roxo)}
+.proximo .nx:hover b{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+
+.d-curto{padding-bottom:.5rem}
+.cliente-card{font-weight:600;color:var(--verde)}
+/* reels */
+.d-reels{padding-top:clamp(2.5rem,5vw,4rem)}
+.reels-wrap{overflow-x:auto;scrollbar-width:none;padding:.5rem 0 1rem;outline-offset:-3px}
+.reels-wrap::-webkit-scrollbar{display:none}
+.reels-trilho{display:flex;gap:clamp(.8rem,2vw,1.4rem);width:max-content;padding:0 clamp(.8rem,2vw,1.4rem)}
+.reel-item{margin:0;width:clamp(150px,15vw,205px);flex:none}
+.reel{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:2px solid var(--marrom);border-radius:22px;overflow:hidden;background:var(--roxo);cursor:pointer;box-shadow:5px 5px 0 var(--verde2);transition:transform .2s,box-shadow .2s}
+.reel:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--verde2)}
+.reel-item:nth-child(2n) .reel{box-shadow:5px 5px 0 var(--roxo)}
+.reel-item:nth-child(2n) .reel:hover{box-shadow:8px 8px 0 var(--roxo)}
+.reel video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.reel .play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(252,250,222,.92);color:var(--roxo);display:grid;place-items:center;box-shadow:0 4px 18px rgba(0,0,0,.25);transition:transform .2s}
+.reel .play svg{width:26px;height:26px;margin-left:3px}
+.reel:hover .play{transform:scale(1.1)}
+.reel-item figcaption{font-size:.7rem;color:var(--verde);font-weight:500;margin-top:.55rem;text-align:center;min-height:1em}
+.reels-dica{display:flex;align-items:center;gap:.5rem;justify-content:center;font-size:.9rem;color:var(--roxo);font-weight:500;margin-top:1rem}
+.reels-dica svg{width:16px;height:16px}
+.rv{position:fixed;inset:0;z-index:110;background:rgba(48,24,66,.95);display:none;align-items:center;justify-content:center;padding:calc(1rem + env(safe-area-inset-top,0px)) 4.5rem calc(1rem + env(safe-area-inset-bottom,0px))}
+.rv.open{display:flex}
+.rv-palco{display:flex;flex-direction:column;align-items:center;gap:.6rem;max-height:100%}
+.rv video{max-height:calc(100vh - 6rem);max-width:min(90vw,480px);aspect-ratio:9/16;border-radius:18px;background:#000}
+.rv p{color:var(--creme);font-size:.82rem;margin:0}
+.rv button{position:absolute;background:var(--creme);color:var(--roxo);border:2px solid var(--marrom);width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.rv button svg{width:22px;height:22px}
+.rv .x{top:calc(1rem + env(safe-area-inset-top,0px));right:1rem}
+.rv .ant{left:1rem;top:50%;transform:translateY(-50%)}
+.rv .prox{right:1rem;top:50%;transform:translateY(-50%)}
+@media (max-width:640px){.rv{padding:4rem .5rem 5rem}.rv .ant,.rv .prox{top:auto;bottom:calc(1rem + env(safe-area-inset-bottom,0px));transform:none}.rv .ant{left:calc(50% - 60px)}.rv .prox{right:calc(50% - 60px)}.rv video{max-height:calc(100vh - 11rem)}}
+
+/* seções do projeto */
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag-status{background:var(--lilas)!important;color:var(--roxo)!important}
+.secao{margin-top:clamp(3.5rem,7vw,5.5rem)}
+.secao-cab{display:flex;align-items:center;flex-wrap:wrap;gap:.9rem;margin-bottom:1.2rem}
+.secao-cab h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--roxo);letter-spacing:-.01em}
+.secao-cab .num{width:46px;height:46px;border-radius:50%;background:var(--verde2);color:var(--roxo);border:2px solid var(--marrom);display:grid;place-items:center;font-weight:800;font-size:1.15rem;flex:none}
+.secao-txt{max-width:46rem;display:grid;gap:.9rem;margin-bottom:1.8rem;font-size:1.02rem}
+.sub-grupo{font-size:1.1rem;color:var(--verde);margin:2rem 0 .9rem}
+.mosaico{display:grid;gap:1rem;align-items:start}
+.mosaico.cols-1{grid-template-columns:1fr}
+.mosaico.cols-2{grid-template-columns:repeat(2,1fr)}
+.mosaico.cols-3{grid-template-columns:repeat(3,1fr)}
+.mosaico.cols-4{grid-template-columns:repeat(4,1fr)}
+.mosaico.cols-5{grid-template-columns:repeat(5,1fr)}
+.zoom-btn{padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden;display:block;line-height:0}
+.zoom-btn.largo{grid-column:1/-1}
+.zoom-btn img{width:100%;height:auto;transition:transform .3s}
+.zoom-btn:hover img{transform:scale(1.02)}
+.listas{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.lista{background:var(--branco);border:2px solid var(--marrom);border-radius:22px;padding:1.4rem 1.6rem}
+.lista h4{color:var(--roxo);font-size:1.15rem;margin-bottom:.7rem}
+.lista ul{margin:0;padding-left:1.1rem;display:grid;gap:.5rem;font-size:.95rem}
+.lista li::marker{color:var(--verde)}
+.secao.destaque{background:var(--lilas);border:2px solid var(--marrom);border-radius:32px;padding:clamp(1.5rem,4vw,2.8rem);box-shadow:8px 8px 0 var(--roxo)}
+.secao.destaque .tag-status{background:var(--branco)!important}
+.secao.destaque .mosaico{gap:clamp(1rem,3vw,2rem)}
+.secao.destaque .zoom-btn{border-radius:18px;background:none;filter:drop-shadow(6px 6px 0 var(--roxo))}
+@media (max-width:900px){.mosaico.cols-4,.mosaico.cols-5,.mosaico.cols-3{grid-template-columns:repeat(2,1fr)}.listas{grid-template-columns:1fr}}
+@media (max-width:520px){.mosaico.cols-2{grid-template-columns:1fr}.mosaico.cols-4,.mosaico.cols-5{grid-template-columns:repeat(2,1fr)}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(48,24,66,.94);display:none;align-items:center;justify-content:center;padding:4rem 1rem calc(4rem + env(safe-area-inset-bottom,0px))}
+.lb.open{display:flex}
+.lb img{max-height:100%;max-width:100%;border-radius:12px;object-fit:contain}
+.lb button{position:absolute;background:var(--creme);color:var(--roxo);border:2px solid var(--marrom);width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb button svg{width:22px;height:22px}
+.lb .x{top:calc(1rem + env(safe-area-inset-top,0px));right:1rem}
+.lb .ant{left:1rem;top:50%;transform:translateY(-50%)}
+.lb .prox{right:1rem;top:50%;transform:translateY(-50%)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="burst" viewBox="0 0 200 200"><polygon points="100.0,0.0 116.0,40.1 150.0,13.4 143.8,56.2 186.6,50.0 159.9,84.0 200.0,100.0 159.9,116.0 186.6,150.0 143.8,143.8 150.0,186.6 116.0,159.9 100.0,200.0 84.0,159.9 50.0,186.6 56.2,143.8 13.4,150.0 40.1,116.0 0.0,100.0 40.1,84.0 13.4,50.0 56.2,56.2 50.0,13.4 84.0,40.1"/></symbol>
+  <symbol id="spark" viewBox="0 0 200 200"><polygon points="100.0,0.0 119.8,80.2 200.0,100.0 119.8,119.8 100.0,200.0 80.2,119.8 0.0,100.0 80.2,80.2"/></symbol>
+  <symbol id="star8" viewBox="0 0 200 200"><polygon points="100.0,0.0 121.0,49.2 170.7,29.3 150.8,79.0 200.0,100.0 150.8,121.0 170.7,170.7 121.0,150.8 100.0,200.0 79.0,150.8 29.3,170.7 49.2,121.0 0.0,100.0 49.2,79.0 29.3,29.3 79.0,49.2"/></symbol>
+  <symbol id="seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="volta" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="baixar" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="whats" viewBox="0 0 24 24"><path d="M4 20l1.2-3.6A8 8 0 1 1 8 19z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9.2c0 3 2.6 5.8 5.8 5.8l1.2-1.6-2-1-1 .8a4.6 4.6 0 0 1-2.2-2.2l.8-1-1-2z" fill="currentColor"/></symbol>
+  <symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="linkedin" viewBox="0 0 24 24"><path d="M6.5 9.5V18M6.5 6v.01M10.5 18v-5a3 3 0 0 1 6 0v5M10.5 9.5V18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4v16M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-post" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 15l3-3 2 2 3-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-reel" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-2M7 14h10v6H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-ux" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 21h6M12 17v4M7 8h6M7 11h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a href="#inicio" class="logo"><img src="img/logo/logo-horizontal-roxo.png" alt="Ana Carnib design" width="700" height="245"></a>
+    <div class="right">
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="menu">
+          <li><a href="#inicio" data-i18n="nav_inicio">Início</a></li>
+          <li class="has-sub" id="subProj">
+            <button class="lk" aria-expanded="false" aria-controls="menuCats" id="btnProj"><span data-i18n="nav_projetos">Projetos</span> ▾</button>
+            <ul class="sub" id="menuCats"></ul>
+          </li>
+          <li><a href="#sobre" data-i18n="nav_sobre">Sobre</a></li>
+          <li><a href="#servicos" data-i18n="nav_servicos">Serviços</a></li>
+          <li><a href="#curriculo" data-i18n="nav_cv">Currículo</a></li>
+          <li><a href="#contato" data-i18n="nav_contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+        <button data-lang="pt" aria-pressed="true">PT</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+        <button data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" data-i18n-aria="abrir_menu" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div id="home">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="script ola" data-i18n="hero_ola">olá, eu sou a</span>
+        <p class="nome">Ana Laura Carvalho Carnib</p>
+        <h1>DESIGNER</h1>
+        <p class="intro" data-i18n="hero_intro">Gráfica e digital, com <strong>3 anos de experiência</strong> criando identidades visuais, posts, reels, impressos e interfaces. Gosto de transformar ideias em soluções visuais claras, funcionais e cheias de personalidade.</p>
+        <div class="acoes">
+          <a href="#projetos" class="btn btn-verde"><span data-i18n="btn_projetos">Ver projetos</span></a>
+          <a href="curriculo/Ana-Laura-Carnib-Curriculo.pdf" download class="btn btn-linha"><svg><use href="#baixar"/></svg><span data-i18n="btn_cv">Baixar currículo</span></a>
+        </div>
+      </div>
+      <div class="foto-hero">
+        <svg class="burst" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+        <div class="moldura"><img src="img/ana-bracos-cruzados.jpg" alt="Ana Laura sorrindo de braços cruzados" data-i18n-alt="alt_hero"></div>
+        <p class="balao" data-i18n="hero_balao">Curiosa por natureza, gosto de aprender rápido e de tirar ideias do papel com propósito.</p>
+        <div class="selo"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg><span><b>3+</b><span data-i18n="selo_anos">anos criando</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true"><div class="trilho" id="trilho"></div></div>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="wrap">
+      <div class="titulo">
+        <h2 data-i18n="t_projetos">Projetos</h2>
+        <span class="script" data-i18n="s_projetos">feitos com carinho</span>
+      </div>
+      <div class="filtros" id="filtros" role="group" data-i18n-aria="filtrar" aria-label="Filtrar projetos"></div>
+      <div class="grade" id="grade"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="foto-sobre">
+        <div class="fundo"></div>
+        <img src="img/ana-banquinho.jpg" alt="Ana Laura sentada em um banquinho, sorrindo" data-i18n-alt="alt_sobre" loading="lazy">
+        <span class="script" data-i18n="s_sobre_foto">prazer!</span>
+      </div>
+      <div class="sobre-txt">
+        <div class="titulo" style="margin-bottom:1.6rem"><h2 data-i18n="t_sobre">Sobre mim</h2></div>
+        <p class="lead" data-i18n="sobre_lead">Sou designer digital e estudante de Design Digital na PUC-Campinas. Atuo com design gráfico, design de posts, identidade visual e product design.</p>
+        <p data-i18n="sobre_txt">Gosto de criar experiências visuais claras, funcionais e com personalidade, seja em uma marca, uma peça impressa, um post ou uma interface. Estou sempre aprendendo e pronta para transformar ideias em soluções que comunicam bem.</p>
+        <div class="numeros">
+          <div><b>3+</b><span data-i18n="n_anos">anos de experiência</span></div>
+          <div><b>4</b><span data-i18n="n_exp">experiências profissionais</span></div>
+        </div>
+
+        <div class="bloco">
+          <h3 data-i18n="t_exp">Experiência</h3>
+          <ol class="linha-tempo">
+            <li><div class="cargo" data-i18n="exp1_cargo">Designer · Estágio</div><div class="onde" data-i18n="exp1_onde">Softplan · nov/2025 até hoje</div><p data-i18n="exp1_txt">Peças para redes sociais, materiais de comunicação interna, páginas de site e apoio em apresentações.</p></li>
+            <li><div class="cargo">Freelancer</div><div class="onde" data-i18n="exp2_onde">2024 até hoje</div><p data-i18n="exp2_txt">Identidade visual, branding, materiais impressos e carrosséis editoriais para Instagram.</p></li>
+            <li><div class="cargo" data-i18n="exp3_cargo">Product Designer · Estágio</div><div class="onde" data-i18n="exp3_onde">Instituto de Pesquisas Eldorado · jun a ago/2025</div><p data-i18n="exp3_txt">Projeto para uma das principais entidades do mercado financeiro brasileiro: pesquisas e benchmarks, imersões com o cliente, prototipação de telas e fluxos de usuário.</p></li>
+            <li><div class="cargo" data-i18n="exp4_cargo">Estagiária de Criação</div><div class="onde" data-i18n="exp4_onde">711 Comunicação · nov/2023 a mai/2025</div><p data-i18n="exp4_txt">Posts e peças impressas para mais de 5 clientes, participação em reuniões de criação, desenvolvimento de identidades visuais e captação de conteúdo.</p></li>
+          </ol>
+        </div>
+
+        <div class="duas">
+          <div class="bloco">
+            <h3 data-i18n="t_form">Formação</h3>
+            <p><strong data-i18n="form_curso">Bacharelado em Design Digital</strong><br><span data-i18n="form_onde">PUC-Campinas · 2023 a 2026</span></p>
+          </div>
+          <div class="bloco">
+            <h3 data-i18n="t_idiomas">Idiomas</h3>
+            <p data-i18n="idiomas_txt">Português nativo<br>Inglês intermediário</p>
+          </div>
+        </div>
+
+        <div class="bloco">
+          <h3 data-i18n="t_ferr">Ferramentas</h3>
+          <div class="chips"><span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>Premiere</span><span>Canva</span><span>CapCut</span></div>
+        </div>
+        <div class="bloco">
+          <h3 data-i18n="t_soft">Como eu trabalho</h3>
+          <div class="chips lilas" id="softs"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="wrap">
+      <div class="titulo">
+        <h2 data-i18n="t_serv">Serviços</h2>
+        <span class="script" data-i18n="s_serv">bora criar?</span>
+        <p class="sub-t" data-i18n="serv_sub">Do conceito à entrega final, para marcas que querem se comunicar com clareza e personalidade.</p>
+      </div>
+      <div class="lista-serv" id="listaServ"></div>
+      <div class="cta-serv">
+        <a class="btn btn-roxo" href="https://wa.me/5519987037170?text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20receber%20um%20or%C3%A7amento%20personalizado%20de%E2%80%A6" target="_blank" rel="noopener" id="btnOrc"><svg><use href="#whats"/></svg><span data-i18n="btn_orc">Pedir um orçamento</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRÍCULO -->
+  <section class="cv" id="curriculo">
+    <div class="wrap">
+      <div class="cv-txt">
+        <span class="script" data-i18n="s_cv">quer saber mais?</span>
+        <h2 data-i18n="t_cv">Meu currículo</h2>
+        <p data-i18n="cv_txt">Experiências, formação, ferramentas e tudo o que eu trago para o seu time, em uma página.</p>
+        <div class="acoes">
+          <a href="curriculo/Ana-Laura-Carnib-Curriculo.pdf" download class="btn btn-verde"><svg><use href="#baixar"/></svg><span data-i18n="btn_cv_pdf">Baixar currículo em PDF</span></a>
+          <a href="curriculo/Ana-Laura-Carnib-Curriculo.pdf" target="_blank" rel="noopener" class="btn btn-linha"><span data-i18n="btn_cv_ver">Abrir no navegador</span></a>
+        </div>
+      </div>
+      <div class="cv-foto">
+        <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+        <img src="img/ana-horizontal.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="wrap">
+      <div>
+        <h2 class="grande" data-i18n="t_contato">vamos criar juntos?</h2>
+        <p class="txt" data-i18n="contato_txt">Tem um projeto, uma vaga ou só quer trocar uma ideia? Me chama por qualquer um desses canais.</p>
+        <div class="canais">
+          <a class="canal" href="mailto:anacarnibdesign@gmail.com"><span class="ic"><svg><use href="#mail"/></svg></span><div><small data-i18n="c_email_trab">E-mail profissional</small><span>anacarnibdesign@gmail.com</span></div></a>
+          <a class="canal" href="mailto:analauracarvalho18@gmail.com"><span class="ic"><svg><use href="#mail"/></svg></span><div><small data-i18n="c_email_pes">E-mail pessoal</small><span>analauracarvalho18@gmail.com</span></div></a>
+          <a class="canal" href="https://wa.me/5519987037170" target="_blank" rel="noopener"><span class="ic"><svg><use href="#whats"/></svg></span><div><small>WhatsApp</small><span>(19) 98703-7170</span></div></a>
+          <a class="canal" href="https://www.instagram.com/anacarnib.design/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#insta"/></svg></span><div><small>Instagram</small><span>@anacarnib.design</span></div></a>
+          <a class="canal" href="https://www.linkedin.com/in/ana-laura-carvalho-carnib-a354a3191/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#linkedin"/></svg></span><div><small>LinkedIn</small><span>Ana Laura Carvalho Carnib</span></div></a>
+        </div>
+      </div>
+      <div class="foto"><img src="img/ana-retrato.jpg" alt="Retrato de Ana Laura sorrindo" data-i18n-alt="alt_contato" loading="lazy"></div>
+    </div>
+  </section>
+</div>
+
+<!-- PÁGINA DE PROJETO -->
+<div id="detalhe" aria-live="polite"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#inicio" class="logo-rodape"><img src="img/logo/logo-empilhado-creme.png" alt="Ana Carnib design" width="500" height="368" loading="lazy"></a>
+    <div class="rodape-dir">
+      <nav class="rodape-links" aria-label="Rodapé">
+        <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+        <a href="#sobre" data-i18n="nav_sobre">Sobre</a>
+        <a href="#servicos" data-i18n="nav_servicos">Serviços</a>
+        <a href="#contato" data-i18n="nav_contato">Contato</a>
+      </nav>
+      <div class="rodape-sociais">
+        <a href="https://wa.me/5519987037170" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#whats"/></svg></a>
+        <a href="mailto:anacarnibdesign@gmail.com" aria-label="E-mail"><svg><use href="#mail"/></svg></a>
+        <a href="https://www.instagram.com/anacarnib.design/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#insta"/></svg></a>
+        <a href="https://www.linkedin.com/in/ana-laura-carvalho-carnib-a354a3191/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#linkedin"/></svg></a>
+      </div>
+      <small>© <span id="ano"></span> Ana Laura Carvalho Carnib · <span data-i18n="rodape">Campinas, Brasil</span></small>
+    </div>
+  </div>
+</footer>
+
+<div class="rv" id="rv" role="dialog" aria-modal="true" aria-label="Reel">
+  <button class="x" id="rvX" aria-label="Fechar"><svg><use href="#fechar"/></svg></button>
+  <button class="ant" id="rvA" aria-label="Anterior"><svg><use href="#volta"/></svg></button>
+  <div class="rv-palco"><video id="rvVideo" controls playsinline></video><p id="rvLeg"></p></div>
+  <button class="prox" id="rvP" aria-label="Próximo"><svg><use href="#seta"/></svg></button>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button class="x" id="lbX" aria-label="Fechar"><svg><use href="#fechar"/></svg></button>
+  <button class="ant" id="lbA" aria-label="Anterior"><svg><use href="#volta"/></svg></button>
+  <img id="lbImg" alt="">
+  <button class="prox" id="lbP" aria-label="Próxima"><svg><use href="#seta"/></svg></button>
+</div>
+
+<script>
+/* =========================================================
+   COMO EDITAR
+   - Textos fixos do site: objeto I18N (pt / en / es).
+   - Projetos: lista PROJETOS logo abaixo.
+   - Imagens de cada projeto: coloque na pasta img/projetos/<slug>/
+       capa.jpg  -> imagem do card e do topo da página do projeto
+       01.jpg, 02.jpg ... 12.jpg -> galeria (aceita .jpg, .png ou .webp)
+     Se uma imagem não existir, o site mostra um espaço ilustrado no lugar.
+   ========================================================= */
+
+const CATS = {
+  identidade: {pt:'Identidade visual', en:'Visual identity', es:'Identidad visual'},
+  uiux:       {pt:'UI/UX', en:'UI/UX', es:'UI/UX'},
+  posts:      {pt:'Design de posts', en:'Post design', es:'Diseño de posts'},
+  reels:      {pt:'Reels', en:'Reels', es:'Reels'},
+  impressos:  {pt:'Impressos', en:'Print', es:'Impresos'}
+};
+
+const PROJETOS = [
+  {
+    slug:'ants', cat:'identidade', cor:'roxo',
+    titulo:"ANT'S bakehouse",
+    cliente:"ANT'S bakehouse", ferramentas:'Illustrator',
+    entrega:{pt:'Logo, símbolo, paleta, ícones, padronagens e aplicações', en:'Logo, symbol, palette, icons, patterns and applications', es:'Logo, símbolo, paleta, íconos, patrones y aplicaciones'},
+    frase:{pt:'feita pra formiguinhas', en:'made for sweet tooths', es:'hecha para golosos'},
+    resumo:{pt:'Identidade visual de uma bakehouse gourmet e artesanal, inspirada na formiga: símbolo de união, dedicação e coletividade.',
+            en:'Visual identity for a gourmet, handmade bakehouse, inspired by the ant: a symbol of unity, dedication and community.',
+            es:'Identidad visual de una bakehouse gourmet y artesanal, inspirada en la hormiga: símbolo de unión, dedicación y colectividad.'},
+    desafio:{pt:'Criar uma marca gourmet que fosse ao mesmo tempo sofisticada e afetiva, e que funcionasse bem em embalagens, papelaria e ponto de venda.',
+             en:'Create a gourmet brand that feels both sophisticated and affectionate, and works across packaging, stationery and the shop itself.',
+             es:'Crear una marca gourmet que fuera a la vez sofisticada y afectiva, y que funcionara bien en empaques, papelería y punto de venta.'},
+    processo:{pt:'Construí o conceito a partir da formiga e do carinho do brasileiro pelos doces, desenhei o símbolo com o coração e defini logotipo, paleta, ícones e padronagens.',
+              en:"I built the concept around the ant and Brazilians' love for sweets, drew the symbol with the heart, and defined the logo, palette, icons and patterns.",
+              es:'Construí el concepto a partir de la hormiga y del cariño de los brasileños por los dulces, dibujé el símbolo con el corazón y definí logotipo, paleta, íconos y patrones.'},
+    resultado:{pt:'Um sistema visual completo, aplicado em embalagens, sacolas, cardápio, cartões, adesivos, avental e padronagens.',
+               en:'A complete visual system applied to packaging, bags, menu, cards, stickers, apron and patterns.',
+               es:'Un sistema visual completo, aplicado en empaques, bolsas, menú, tarjetas, adhesivos, delantal y patrones.'},
+    secoes:[
+      {titulo:{pt:'Conceito da marca', en:'Brand concept', es:'Concepto de la marca'},
+       texto:{
+        pt:['A ANT\'S bakehouse nasce inspirada na formiga, símbolo universal de união, dedicação e coletividade. Representar esse pequeno ser no símbolo foi essencial para transmitir a ideia de força em comunidade e trabalho em conjunto, valores que guiam a marca em cada detalhe.',
+            'O próprio nome carrega esse espírito. ANT\'S não é só uma referência direta à formiga, mas também ao conceito de união, de estar junto e compartilhar momentos especiais. Na bakehouse, cada cliente faz parte de um grande formigueiro, onde todos se conectam pelo sabor.',
+            'Há ainda um toque cultural carinhoso: no Brasil, chamamos de "formiguinha" a pessoa apaixonada por doces, que não resiste a um pedacinho de bolo ou sobremesa. Essa essência doce e afetiva atravessa fronteiras e traz proximidade e identidade à marca.',
+            'A ANT\'S se posiciona como uma bakehouse gourmet e artesanal. Cada receita é feita à mão, com cuidado nos mínimos detalhes, unindo sofisticação e aconchego. A promessa da marca é oferecer experiências refinadas e acolhedoras, transformando cada doce em um gesto de carinho.'],
+        en:['ANT\'S bakehouse was born inspired by the ant, a universal symbol of unity, dedication and collectivity. Representing this small creature in the symbol was essential to convey strength in community and teamwork, values that guide the brand in every detail.',
+            'The name itself carries this spirit. ANT\'S is not only a direct reference to the ant, but also to the idea of unity, of being together and sharing special moments. At the bakehouse, every customer is part of a big anthill, where everyone connects through flavor.',
+            'There is also a loving cultural touch: in Brazil, we call someone who is passionate about sweets a "formiguinha", a little ant who can\'t resist a piece of cake or dessert. This sweet, affectionate essence crosses borders and brings closeness and identity to the brand.',
+            'ANT\'S positions itself as a gourmet, artisanal bakehouse. Every recipe is handmade, with care in the smallest details, combining sophistication and coziness. The brand\'s promise is to offer refined and welcoming experiences, turning every treat into a gesture of affection.'],
+        es:['ANT\'S bakehouse nace inspirada en la hormiga, símbolo universal de unión, dedicación y colectividad. Representar este pequeño ser en el símbolo fue esencial para transmitir la idea de fuerza en comunidad y trabajo en equipo, valores que guían la marca en cada detalle.',
+            'El propio nombre lleva ese espíritu. ANT\'S no es solo una referencia directa a la hormiga, sino también al concepto de unión, de estar juntos y compartir momentos especiales. En la bakehouse, cada cliente forma parte de un gran hormiguero, donde todos se conectan a través del sabor.',
+            'Hay además un toque cultural cariñoso: en Brasil llamamos "formiguinha" (hormiguita) a la persona apasionada por los dulces, que no resiste un pedacito de pastel o postre. Esa esencia dulce y afectiva cruza fronteras y aporta cercanía e identidad a la marca.',
+            'ANT\'S se posiciona como una bakehouse gourmet y artesanal. Cada receta se hace a mano, con cuidado en los mínimos detalles, uniendo sofisticación y calidez. La promesa de la marca es ofrecer experiencias refinadas y acogedoras, transformando cada dulce en un gesto de cariño.']}},
+      {titulo:{pt:'Logotipo e símbolo', en:'Logo and symbol', es:'Logotipo y símbolo'},
+       grupos:[{cols:2, imgs:['logo-preto','simbolo','logo-marrom','adesivo']}]},
+      {titulo:{pt:'Paleta, ícones e padronagens', en:'Palette, icons and patterns', es:'Paleta, íconos y patrones'},
+       grupos:[{cols:2, imgs:['paleta','icones','padrao-xadrez','padrao-formigas']}]},
+      {titulo:{pt:'Aplicações', en:'Applications', es:'Aplicaciones'},
+       grupos:[{cols:2, imgs:[{src:'papelaria',largo:true},'embalagem','saco','caixas','avental']}]}
+    ]
+  },
+  {
+    slug:'junior-carnib', cat:'identidade', cor:'lilas',
+    titulo:'J.Carnib Imóveis',
+    cliente:'Junior Carnib, corretor de imóveis', ferramentas:'Illustrator, Photoshop',
+    projeto:{pt:'Freelancer, 2026', en:'Freelance, 2026', es:'Freelance, 2026'},
+    entrega:{pt:'Paleta, variações de logo, ícone, padronagens e aplicações', en:'Palette, logo variations, icon, patterns and applications', es:'Paleta, variaciones de logo, ícono, patrones y aplicaciones'},
+    frase:{pt:'sofisticação que acolhe', en:'sophistication that feels like home', es:'sofisticación que acoge'},
+    resumo:{pt:'Identidade visual criada do zero para Junior Carnib, corretor com mais de 20 anos de mercado que decidiu seguir carreira própria usando o próprio nome como marca.',
+            en:'A visual identity built from scratch for Junior Carnib, a real estate agent with over 20 years of experience who decided to go independent using his own name as the brand.',
+            es:'Identidad visual creada desde cero para Junior Carnib, corredor inmobiliario con más de 20 años de experiencia que decidió seguir su propio camino usando su nombre como marca.'},
+    desafio:{pt:'Fugir do clássico logo de casinha azul das imobiliárias e criar uma marca sofisticada e acolhedora, que colocasse o nome e a experiência do Junior em primeiro plano.',
+             en:"Move away from the classic blue little-house logo of real estate agencies and create a sophisticated, welcoming brand that puts Junior's name and experience front and center.",
+             es:'Escapar del clásico logo de casita azul de las inmobiliarias y crear una marca sofisticada y acogedora, que pusiera en primer plano el nombre y la experiencia de Junior.'},
+    processo:{pt:'Captação de briefing, desenvolvimento do símbolo a partir das iniciais J e C, testes de cor e definição das versões da marca.',
+              en:'Briefing, developing the symbol from the initials J and C, color tests and defining the brand versions.',
+              es:'Captación del briefing, desarrollo del símbolo a partir de las iniciales J y C, pruebas de color y definición de las versiones de la marca.'},
+    resultado:{pt:'Uma marca própria e reconhecível, com paleta, variações de logo, ícone, padronagens e aplicações em papelaria e cartões de visita.',
+               en:'A distinctive brand of his own, with palette, logo variations, icon, patterns and applications on stationery and business cards.',
+               es:'Una marca propia y reconocible, con paleta, variaciones de logo, ícono, patrones y aplicaciones en papelería y tarjetas de presentación.'},
+    secoes:[
+      {titulo:{pt:'Conceito da marca', en:'Brand concept', es:'Concepto de la marca'},
+       texto:{
+        pt:['Depois de mais de 20 anos no mercado imobiliário trabalhando para outras pessoas, Junior Carnib decidiu seguir um caminho próprio. Com uma trajetória construída na confiança dos clientes, o próprio nome se tornou o seu maior ativo, e a marca nasceu para valorizar essa história.',
+            'O símbolo une as iniciais J e C em traços contínuos que formam a silhueta de um prédio. A referência ao mercado imobiliário aparece de forma elegante, sem cair no clichê da casinha.',
+            'A paleta foge do azul tradicional e sem vida das imobiliárias. O terra, o verde oliva e o bege trazem o aconchego e a sofisticação que a marca buscava, e a padronagem criada a partir do símbolo dá unidade a todas as aplicações.'],
+        en:['After more than 20 years in real estate working for others, Junior Carnib decided to go his own way. With a career built on clients\' trust, his own name became his greatest asset, and the brand was born to honor that story.',
+            'The symbol joins the initials J and C in continuous strokes that form the silhouette of a building. The reference to real estate appears in an elegant way, without falling into the little-house cliché.',
+            'The palette moves away from the traditional, lifeless blue of real estate agencies. Terracotta, olive green and beige bring the warmth and sophistication the brand was looking for, and the pattern created from the symbol ties every application together.'],
+        es:['Después de más de 20 años en el mercado inmobiliario trabajando para otros, Junior Carnib decidió seguir su propio camino. Con una trayectoria construida sobre la confianza de sus clientes, su nombre se convirtió en su mayor activo, y la marca nació para valorar esa historia.',
+            'El símbolo une las iniciales J y C en trazos continuos que forman la silueta de un edificio. La referencia al mercado inmobiliario aparece de forma elegante, sin caer en el cliché de la casita.',
+            'La paleta se aleja del azul tradicional y sin vida de las inmobiliarias. El terracota, el verde oliva y el beige aportan la calidez y la sofisticación que la marca buscaba, y el patrón creado a partir del símbolo da unidad a todas las aplicaciones.']}},
+      {titulo:{pt:'Logotipo e símbolo', en:'Logo and symbol', es:'Logotipo y símbolo'},
+       grupos:[{cols:2, imgs:['logo-vertical_bege-terra','logo-vertical_verde-bege','logo-bege-terra','logo-terra-bege','logo-verde-bege','icone']}]},
+      {titulo:{pt:'Paleta e padronagem', en:'Palette and pattern', es:'Paleta y patrón'},
+       grupos:[{cols:1, imgs:['paleta','padronagem']}]},
+      {titulo:{pt:'Aplicações', en:'Applications', es:'Aplicaciones'},
+       grupos:[{cols:2, imgs:['cartao','papelaria','logo-dourado','caderno']}]}
+    ]
+  },
+  {
+    slug:'vovo-antonio', cat:'uiux', cor:'verde', status:true, numerar:true, capaPos:'92% 50%',
+    titulo:'Vovô Antonio',
+    cliente:{pt:'Projeto em grupo', en:'Team project', es:'Proyecto en grupo'}, ferramentas:'Figma',
+    equipe:'Ana Laura Carvalho, Beatriz Barbosa e Júlia',
+    entrega:{pt:'Pesquisa, fluxos, protótipo e guia de estilo', en:'Research, flows, prototype and style guide', es:'Investigación, flujos, prototipo y guía de estilo'},
+    frase:{pt:'cuidar de quem cuida', en:'caring for caregivers', es:'cuidar a quien cuida'},
+    resumo:{pt:'Aplicativo que ajuda cuidadores de idosos a reunir, em um só lugar, as fichas do idoso, a alimentação, a rotina e a conversa com familiares e outros cuidadores.',
+            en:"An app that helps elderly caregivers keep everything in one place: the patient's records, meals, daily routine and conversations with family and other caregivers.",
+            es:'Aplicación que ayuda a los cuidadores de personas mayores a reunir en un solo lugar las fichas, la alimentación, la rutina y la conversación con familiares y otros cuidadores.'},
+    desafio:{pt:'Muitos cuidadores têm dificuldade para centralizar as informações do idoso, das fichas técnicas ao que ele pode ou não comer e fazer durante o dia. Na troca de cuidador, detalhes acabam se perdendo.',
+             en:"Many caregivers struggle to keep the elderly person's information in one place, from medical records to what they can or can't eat and do during the day. When caregivers change shifts, details get lost.",
+             es:'Muchos cuidadores tienen dificultades para centralizar la información de la persona mayor, desde las fichas técnicas hasta lo que puede o no comer y hacer durante el día. En el cambio de cuidador, se pierden detalles.'},
+    processo:{pt:'Seguimos um processo de design em cinco etapas: descoberta, definição, ideação, prototipação e testes com usuários.',
+              en:'We followed a five-stage design process: discovery, definition, ideation, prototyping and user testing.',
+              es:'Seguimos un proceso de diseño en cinco etapas: descubrimiento, definición, ideación, prototipado y pruebas con usuarios.'},
+    resultado:{pt:'Todos os participantes do teste concluíram as tarefas propostas. Os ajustes apontados nos testes estão guiando a nova versão do app.',
+               en:'Every test participant completed the proposed tasks. The issues found in testing are now guiding the new version of the app.',
+               es:'Todos los participantes de la prueba completaron las tareas propuestas. Los ajustes detectados en las pruebas están guiando la nueva versión de la app.'},
+    secoes:[
+      {titulo:{pt:'Descoberta', en:'Discovery', es:'Descubrimiento'},
+       texto:{pt:['Começamos com uma matriz CSD, separando certezas, suposições e dúvidas sobre a rotina de quem cuida de idosos. A partir dela fizemos uma desk research e organizamos os achados em cartões de insight.',
+                  'Depois, entrevistamos cuidadores sobre formação, rotina, preparo das refeições, suplementação, passagem de turno e as maiores dificuldades do dia a dia.'],
+              en:['We started with a CSD matrix, separating certainties, assumptions and doubts about the routine of elderly caregivers. From there we ran desk research and organized the findings into insight cards.',
+                  'Then we interviewed caregivers about their training, routine, meal preparation, supplements, shift handovers and their biggest daily challenges.'],
+              es:['Empezamos con una matriz CSD, separando certezas, suposiciones y dudas sobre la rutina de quienes cuidan a personas mayores. A partir de ella hicimos una desk research y organizamos los hallazgos en tarjetas de insight.',
+                  'Después entrevistamos a cuidadores sobre su formación, rutina, preparación de comidas, suplementación, cambio de turno y sus mayores dificultades diarias.']},
+       grupos:[{cols:2, imgs:[{src:'csd',largo:true},'insight-1','insight-2']}]},
+      {titulo:{pt:'Definição', en:'Definition', es:'Definición'},
+       texto:{pt:['Com as entrevistas, criamos a persona Roberto, enfermeiro especializado em geriatria que cuida de pacientes e administra a própria empresa de cuidadores. O mapa de empatia reuniu o que esse cuidador vê, faz, ouve e sente, além das suas dores e ganhos.'],
+              en:['From the interviews we created Roberto, a nurse specialized in geriatrics who cares for patients and runs his own caregiving company. The empathy map gathered what this caregiver sees, does, hears and feels, plus his pains and gains.'],
+              es:['Con las entrevistas creamos la persona Roberto, enfermero especializado en geriatría que cuida pacientes y administra su propia empresa de cuidadores. El mapa de empatía reunió lo que este cuidador ve, hace, oye y siente, además de sus dolores y ganancias.']},
+       grupos:[{cols:1, imgs:['persona','empatia']}]},
+      {titulo:{pt:'Ideação', en:'Ideation', es:'Ideación'},
+       texto:{pt:['Organizamos as funcionalidades do app (cadastro, perfil do idoso, alimentação, rotina, chat e notificações) e desenhamos o fluxo de cada uma.'],
+              en:["We mapped the app's features (sign-up, elderly profile, meals, routine, chat and notifications) and designed the flow for each one."],
+              es:['Organizamos las funcionalidades de la app (registro, perfil de la persona mayor, alimentación, rutina, chat y notificaciones) y diseñamos el flujo de cada una.']},
+       grupos:[{cols:2, imgs:[{src:'funcionalidades',largo:true},'fluxos-1','fluxos-2']}]},
+      {titulo:{pt:'Prototipação', en:'Prototyping', es:'Prototipado'},
+       texto:{pt:['Partimos de telas em média fidelidade e evoluímos para a alta fidelidade, com algumas mudanças decididas pelo grupo no caminho. Também montamos um guia de estilo com paleta, tipografia, ícones, botões e componentes.'],
+              en:['We started with mid-fidelity screens and moved on to high fidelity, with some changes the team decided along the way. We also built a style guide with palette, typography, icons, buttons and components.'],
+              es:['Partimos de pantallas de fidelidad media y evolucionamos a alta fidelidad, con algunos cambios que el grupo decidió en el camino. También armamos una guía de estilo con paleta, tipografía, íconos, botones y componentes.']},
+       grupos:[
+         {sub:{pt:'Média fidelidade', en:'Mid fidelity', es:'Fidelidad media'}, cols:2, imgs:['media-1','media-2']},
+         {sub:{pt:'Alta fidelidade', en:'High fidelity', es:'Alta fidelidad'}, cols:3, imgs:['alta-1','alta-2','alta-3']},
+         {sub:{pt:'Guia de estilo', en:'Style guide', es:'Guía de estilo'}, cols:3, imgs:['guia-1','guia-2','guia-3']}]},
+      {titulo:{pt:'Testes', en:'Testing', es:'Pruebas'},
+       texto:{pt:['Testes de usabilidade com 4 usuários.'], en:['Usability tests with 4 users.'], es:['Pruebas de usabilidad con 4 usuarios.']},
+       listas:[
+        {titulo:{pt:'Tarefas', en:'Tasks', es:'Tareas'},
+         itens:{pt:['Criar o perfil do idoso e acessar a área de fichas','Adicionar um evento na rotina','Abrir um chat existente e criar uma nova conversa','Ver a quantidade de alimentos nas refeições','Registrar uma intercorrência nas refeições','Acessar as fichas já criadas do idoso'],
+                en:["Create the elderly person's profile and open the records area",'Add an event to the routine','Open an existing chat and start a new one','Check food quantities in meals','Log an incident in meals',"Open the elderly person's existing records"],
+                es:['Crear el perfil de la persona mayor y acceder a las fichas','Agregar un evento a la rutina','Abrir un chat existente y crear una nueva conversación','Ver la cantidad de alimentos en las comidas','Registrar una incidencia en las comidas','Acceder a las fichas ya creadas']}},
+        {titulo:{pt:'Resultados e melhorias', en:'Results and improvements', es:'Resultados y mejoras'},
+         itens:{pt:['Todas as tarefas foram concluídas por todos os usuários','Todos se perderam no botão de voltar, que prendia o usuário em um ciclo de telas','Duas usuárias demoraram a encontrar o menu. Melhoria: aumentar o botão e a espessura dos seus elementos','Uma usuária teve dificuldade com botões pequenos, como o check da rotina e o de criar chat. Melhoria: aumentar a área de toque'],
+                en:['All tasks were completed by every user','Everyone got stuck with the back button, which trapped them in a loop of screens','Two users took longer to find the menu. Improvement: make the button bigger and its strokes thicker','One user struggled with small buttons, like the routine check and new chat. Improvement: increase the touch area'],
+                es:['Todos los usuarios completaron todas las tareas','Todos se perdieron con el botón de volver, que los dejaba atrapados en un ciclo de pantallas','Dos usuarias tardaron en encontrar el menú. Mejora: agrandar el botón y el grosor de sus elementos','Una usuaria tuvo dificultad con botones pequeños, como el check de la rutina y el de crear chat. Mejora: aumentar el área táctil']}}]},
+      {destaque:true, semNumero:true,
+       titulo:{pt:'Nova versão em andamento', en:'New version in progress', es:'Nueva versión en curso'},
+       texto:{pt:['Este foi meu primeiro projeto de UI. Agora estou redesenhando as telas com tudo o que aprendi desde então e com as melhorias apontadas nos testes. Aqui vai uma prévia do que já está pronto.'],
+              en:["This was my first UI project. I'm now redesigning the screens with everything I've learned since then and the improvements found in testing. Here's a preview of what's ready so far."],
+              es:['Este fue mi primer proyecto de UI. Ahora estoy rediseñando las pantallas con todo lo que aprendí desde entonces y con las mejoras detectadas en las pruebas. Aquí va un adelanto de lo que ya está listo.']},
+       grupos:[{cols:3, imgs:['nova-1.webp','nova-2.webp','nova-3.webp','nova-4.webp','nova-5.webp','nova-6.webp']}]}
+    ]
+  },
+  {
+    slug:'trufatella', cat:'posts', cor:'lilas', capaPos:'0% 50%',
+    titulo:'Trufatella',
+    cliente:{pt:'Trufatella, pela 711 Comunicação', en:'Trufatella, via 711 Comunicação', es:'Trufatella, vía 711 Comunicação'}, ferramentas:'Photoshop',
+    entrega:{pt:'Posts, carrosséis e stories para Instagram', en:'Instagram posts, carousels and stories', es:'Posts, carruseles y stories para Instagram'},
+    frase:{pt:'feito com amor é mais doce', en:'made with love tastes sweeter', es:'hecho con amor es más dulce'},
+    resumo:{pt:'A Trufatella é uma chocolateria premium e artesanal que vende sensações através dos seus chocolates. Criei as artes do Instagram da marca durante meu estágio na 711 Comunicação.',
+            en:'Trufatella is a premium, artisanal chocolate shop that sells sensations through its chocolates. I created the brand\'s Instagram artwork during my internship at 711 Comunicação.',
+            es:'Trufatella es una chocolatería premium y artesanal que vende sensaciones a través de sus chocolates. Creé las piezas de Instagram de la marca durante mi pasantía en 711 Comunicação.'},
+    desafio:{pt:'Transmitir aconchego em cada peça e refletir o caráter premium e artesanal da marca, seguindo à risca o manual de marca.',
+             en:"Convey coziness in every piece and reflect the brand's premium, artisanal character, strictly following the brand guidelines.",
+             es:'Transmitir calidez en cada pieza y reflejar el carácter premium y artesanal de la marca, siguiendo al pie de la letra el manual de marca.'},
+    processo:{pt:'A partir dos briefings definidos pela equipe da 711 Comunicação, criei as artes usando a paleta do manual de marca e as fontes que estabeleci como padrão para a comunicação. Minha função foi exclusivamente a criação das peças.',
+              en:'Based on briefs defined by the 711 Comunicação team, I designed the pieces using the palette from the brand guidelines and the typefaces I set as the standard for its communication. My role was focused solely on creating the artwork.',
+              es:'A partir de los briefings definidos por el equipo de 711 Comunicação, creé las piezas usando la paleta del manual de marca y las tipografías que establecí como estándar para la comunicación. Mi función fue exclusivamente la creación de las piezas.'},
+    resultado:{pt:'Um feed e stories com identidade consistente, para Páscoa, catálogo, serviços corporativos, promoções e dicas de harmonização com café.',
+               en:'A feed and stories with a consistent identity, covering Easter, the catalog, corporate services, promotions and coffee pairing tips.',
+               es:'Un feed y stories con identidad consistente, para Pascua, catálogo, servicios corporativos, promociones y consejos de maridaje con café.'},
+    secoes:[
+      {titulo:{pt:'Feed', en:'Feed', es:'Feed'},
+       texto:{pt:['Posts e carrosséis sobre serviços corporativos, a campanha de Páscoa, dicas de harmonização e os produtos da marca.'],
+              en:["Posts and carousels about corporate services, the Easter campaign, pairing tips and the brand's products."],
+              es:['Posts y carruseles sobre servicios corporativos, la campaña de Pascua, consejos de maridaje y los productos de la marca.']},
+       grupos:[{cols:3, imgs:['feed-01','feed-02','feed-09','feed-03','feed-04','feed-05','feed-06','feed-07','feed-08']}]},
+      {titulo:{pt:'Stories', en:'Stories', es:'Stories'},
+       texto:{pt:['Stories com cardápio de festa, catálogo, promoções da semana, produtos e bastidores da produção artesanal.'],
+              en:['Stories featuring the party menu, catalog, weekly deals, products and behind the scenes of the handmade production.'],
+              es:['Stories con el menú de fiestas, catálogo, promociones de la semana, productos y detrás de escena de la producción artesanal.']},
+       grupos:[{cols:4, imgs:['stories-01','stories-02','stories-03','stories-04','stories-05','stories-06','stories-07','stories-08','stories-09','stories-10']}]}
+    ]
+  },
+  {
+    slug:'soul-cabelos', cat:'posts', cor:'roxo',
+    titulo:'Soul Cabelos',
+    cliente:'Soul Cabelos', ferramentas:'Photoshop, Illustrator, Canva',
+    projeto:{pt:'Freelancer, nov/2024 a ago/2026', en:'Freelance, Nov 2024 to Aug 2026', es:'Freelance, nov/2024 a ago/2026'},
+    entrega:{pt:'Feed, carrosséis, stories, reels e captação de conteúdo', en:'Feed, carousels, stories, reels and content capture', es:'Feed, carruseles, stories, reels y captación de contenido'},
+    frase:{pt:'cuidado fio a fio', en:'care, strand by strand', es:'cuidado hebra a hebra'},
+    resumo:{pt:'O Soul Cabelos é o salão de um único cabeleireiro, especializado em coloração. Cuidei do Instagram como freelancer, das artes e captações de conteúdo à edição de reels.',
+            en:'Soul Cabelos is a one-stylist hair salon specialized in hair color. I handled its Instagram as a freelancer, from artwork and content capture to reels editing.',
+            es:'Soul Cabelos es el salón de un único peluquero, especializado en coloración. Me encargué de su Instagram como freelance, desde las piezas y la captación de contenido hasta la edición de reels.'},
+    desafio:{pt:'Atrair novos clientes e mostrar a rotina do salão, valorizando a especialização em coloração e o atendimento próximo de quem cuida de cada cliente pessoalmente.',
+             en:'Attract new clients and show the salon\'s routine, highlighting its expertise in hair color and the close, personal service.',
+             es:'Atraer nuevos clientes y mostrar la rutina del salón, valorando la especialización en coloración y la atención cercana y personal.'},
+    processo:{pt:'Eu decidia os conteúdos e as artes, fazia as captações no salão e defini as fontes da comunicação, trabalhando com o logo e as cores que a marca já tinha.',
+              en:'I planned the content and artwork, captured photos and videos at the salon, and defined the typefaces for its communication, working with the brand\'s existing logo and colors.',
+              es:'Yo decidía los contenidos y las piezas, hacía la captación en el salón y definí las tipografías de la comunicación, trabajando con el logo y los colores que la marca ya tenía.'},
+    resultado:{pt:'Um Instagram com identidade consistente, que mistura conteúdo educativo, campanhas sazonais como o Ritual de Inverno e os bastidores do dia a dia do salão.',
+               en:'An Instagram with a consistent identity, mixing educational content, seasonal campaigns like the Winter Ritual and behind the scenes of the salon\'s daily life.',
+               es:'Un Instagram con identidad consistente, que combina contenido educativo, campañas de temporada como el Ritual de Invierno y el día a día del salón.'},
+    secoes:[
+      {titulo:{pt:'Carrosséis', en:'Carousels', es:'Carruseles'},
+       texto:{pt:['Carrosséis educativos e de campanha, com dicas de cuidado para o inverno e o lançamento do Ritual de Inverno do salão.'],
+              en:['Educational and campaign carousels, with winter hair care tips and the launch of the salon\'s Winter Ritual.'],
+              es:['Carruseles educativos y de campaña, con consejos de cuidado para el invierno y el lanzamiento del Ritual de Invierno del salón.']},
+       grupos:[
+         {sub:{pt:'Seu cabelo no inverno', en:'Your hair in winter', es:'Tu cabello en invierno'}, cols:3, imgs:['inverno-1','inverno-2','inverno-3','inverno-4','inverno-5','inverno-6']},
+         {sub:{pt:'Ritual de Inverno', en:'Winter Ritual', es:'Ritual de Invierno'}, cols:4, imgs:['ritual-1','ritual-2','ritual-3','ritual-4']},
+         {sub:{pt:'3 erros no inverno', en:'3 winter mistakes', es:'3 errores en invierno'}, cols:4, imgs:['erros-1','erros-2']}]},
+      {titulo:{pt:'Stories', en:'Stories', es:'Stories'},
+       texto:{pt:['Sequências de stories com dicas de cuidado, convites para agendar e o dia a dia do salão, muitas delas com fotos que captei por lá.'],
+              en:['Story sequences with hair care tips, booking invitations and the salon\'s daily life, many featuring photos I captured there.'],
+              es:['Secuencias de stories con consejos de cuidado, invitaciones para agendar y el día a día del salón, muchas con fotos que capté allí.']},
+       grupos:[
+         {sub:{pt:'Preparando o cabelo para a química', en:'Preparing hair for chemical treatments', es:'Preparando el cabello para la química'}, cols:4, imgs:['story-quimica-1','story-quimica-2']},
+         {sub:{pt:'Arrumar ou tratar?', en:'Fix it or treat it?', es:'¿Arreglar o tratar?'}, cols:4, imgs:['story-tratar-1','story-tratar-2','story-tratar-3','story-tratar-4']},
+         {sub:{pt:'Rotina, produtos e convites', en:'Routine, products and invitations', es:'Rutina, productos e invitaciones'}, cols:4, imgs:['story-bom-dia','story-prontas','story-desacelerar','story-tudo-num-lugar','story-autoestima','story-sebastian','story-salvou']}]},
+      {titulo:{pt:'Posts e captação de conteúdo', en:'Posts and content capture', es:'Posts y captación de contenido'},
+       texto:{pt:['Posts com fotos que eu mesma captei no salão, mostrando o atendimento e a rotina de perto.'],
+              en:['Posts featuring photos I captured at the salon, showing the service and daily routine up close.'],
+              es:['Posts con fotos que yo misma capté en el salón, mostrando la atención y la rutina de cerca.']},
+       grupos:[{cols:3, imgs:['post-duas-maos','foto-cabeleireiro','foto-unhas']}]},
+      {titulo:{pt:'Reels', en:'Reels', es:'Reels'},
+       texto:{pt:['Os reels que editei para o salão estão na página de edição de reels.'],
+              en:['The reels I edited for the salon are on the reels editing page.'],
+              es:['Los reels que edité para el salón están en la página de edición de reels.']},
+       botao:{href:'#/projeto/reels', label:{pt:'Ver os reels', en:'Watch the reels', es:'Ver los reels'}}}
+    ]
+  },
+  {
+    slug:'sanluer', cat:'posts', cor:'verde',
+    titulo:'Sanluèr',
+    cliente:{pt:'Sanluèr Estética Avançada, pela 711 Comunicação', en:'Sanluèr Advanced Aesthetics, via 711 Comunicação', es:'Sanluèr Estética Avanzada, vía 711 Comunicação'},
+    projeto:{pt:'Freelancer pela 711 Comunicação', en:'Freelance via 711 Comunicação', es:'Freelance vía 711 Comunicação'},
+    entrega:{pt:'Carrosséis e stories para Instagram', en:'Instagram carousels and stories', es:'Carruseles y stories para Instagram'},
+    frase:{pt:'beleza com cuidado', en:'beauty with care', es:'belleza con cuidado'},
+    resumo:{pt:'A Sanluèr é uma clínica de estética avançada no Tatuapé, em São Paulo, que une tecnologia, ciência e um toque humano para revelar a beleza natural de cada paciente. Criei carrosséis e stories para o Instagram da clínica como freelancer pela 711 Comunicação.',
+            en:'Sanluèr is an advanced aesthetics clinic in Tatuapé, São Paulo, that combines technology, science and a human touch to reveal each patient\'s natural beauty. I created carousels and stories for the clinic\'s Instagram as a freelancer via 711 Comunicação.',
+            es:'Sanluèr es una clínica de estética avanzada en Tatuapé, São Paulo, que une tecnología, ciencia y un toque humano para revelar la belleza natural de cada paciente. Creé carruseles y stories para el Instagram de la clínica como freelance vía 711 Comunicação.'},
+    desafio:{pt:'Traduzir em posts uma estética sofisticada e, ao mesmo tempo, acolhedora: falar de autoestima e cuidado sem exageros, reforçando a autoridade da Dra. Laila Hassan e a escuta próxima que a clínica oferece.',
+             en:'Translate into posts an aesthetic that is both sophisticated and welcoming: talking about self-esteem and care without excess, while reinforcing Dr. Laila Hassan\'s authority and the clinic\'s attentive approach.',
+             es:'Traducir en posts una estética sofisticada y, a la vez, acogedora: hablar de autoestima y cuidado sin excesos, reforzando la autoridad de la Dra. Laila Hassan y la escucha cercana que ofrece la clínica.'},
+    processo:{pt:'Desenvolvi as peças combinando tipografia elegante, tons neutros com dourado e preto, bastante respiro e fotos da equipe e da clínica, em conteúdos educativos sobre pele, cabelo e bem-estar.',
+              en:'I designed the pieces combining elegant typography, neutral tones with gold and black, generous white space and photos of the team and clinic, in educational content about skin, hair and well-being.',
+              es:'Desarrollé las piezas combinando tipografía elegante, tonos neutros con dorado y negro, mucho aire y fotos del equipo y de la clínica, en contenidos educativos sobre piel, cabello y bienestar.'},
+    resultado:{pt:'Um Instagram com linguagem visual consistente e refinada, que mistura dicas de especialista, parcerias como a com a nutricionista Aline Pina e convites para agendar uma avaliação.',
+               en:'An Instagram with a consistent, refined visual language, mixing expert tips, partnerships like the one with nutritionist Aline Pina and invitations to book an assessment.',
+               es:'Un Instagram con un lenguaje visual consistente y refinado, que combina consejos de especialista, alianzas como la de la nutricionista Aline Pina e invitaciones para agendar una evaluación.'},
+    secoes:[
+      {titulo:{pt:'Carrosséis', en:'Carousels', es:'Carruseles'},
+       texto:{pt:['Carrosséis educativos e institucionais, com dicas da própria Dra. Laila, conteúdos sobre autoestima e campanhas que convidam a cuidar de si.'],
+              en:['Educational and institutional carousels, with tips from Dr. Laila herself, content about self-esteem and campaigns that invite people to take care of themselves.'],
+              es:['Carruseles educativos e institucionales, con consejos de la propia Dra. Laila, contenidos sobre autoestima y campañas que invitan a cuidarse.']},
+       grupos:[
+         {sub:{pt:'Pele hidratada no inverno', en:'Hydrated skin in winter', es:'Piel hidratada en invierno'}, cols:4, imgs:['pele-1','pele-2','pele-3','pele-4','pele-5','pele-6','pele-7']},
+         {sub:{pt:'Queda capilar, com a nutricionista Aline Pina', en:'Hair loss, with nutritionist Aline Pina', es:'Caída del cabello, con la nutricionista Aline Pina'}, cols:4, imgs:['queda-1','queda-3','queda-2','queda-4']},
+         {sub:{pt:'Estética e autoestima', en:'Aesthetics and self-esteem', es:'Estética y autoestima'}, cols:4, imgs:['autoestima-1','autoestima-2','autoestima-4','autoestima-3','autoestima-5']},
+         {sub:{pt:'Você cuida de tudo', en:'You take care of everything', es:'Tú cuidas de todo'}, cols:4, imgs:['cuida-1','cuida-2','cuida-3']}]},
+      {titulo:{pt:'Stories', en:'Stories', es:'Stories'},
+       texto:{pt:['Stories que acompanham os temas do feed, como os cuidados com a pele no inverno, sempre fechando com um convite para falar com a clínica.'],
+              en:['Stories that follow the feed\'s topics, such as winter skin care, always ending with an invitation to contact the clinic.'],
+              es:['Stories que acompañan los temas del feed, como el cuidado de la piel en invierno, siempre cerrando con una invitación a hablar con la clínica.']},
+       grupos:[{cols:5, imgs:['story-1','story-2','story-3','story-4','story-cansadas']}]}
+    ]
+  },
+  {
+    slug:'reels', cat:'reels', cor:'verde', reels:true,
+    titulo:{pt:'Edição de reels', en:'Reels editing', es:'Edición de reels'},
+    frase:{pt:'no ritmo certo', en:'right on beat', es:'al ritmo justo'},
+    resumo:{pt:'Reels editados para marcas de saúde, beleza, direito e negócios: cortes no ritmo, legendas e trilha para prender a atenção logo nos primeiros segundos.',
+            en:'Reels edited for health, beauty, law and business brands: cuts on the beat, captions and music to hook viewers in the first seconds.',
+            es:'Reels editados para marcas de salud, belleza, derecho y negocios: cortes al ritmo, subtítulos y música para atrapar la atención en los primeros segundos.'},
+    /* cliente: aparece como legenda pequena embaixo do reel; sem cliente = sem legenda */
+    videos:[
+      {n:'reel-01', cliente:'711 Comunicação'}, {n:'reel-02'}, {n:'reel-03', cliente:'711 Comunicação'},
+      {n:'reel-04', cliente:'711 Comunicação'}, {n:'reel-05'}, {n:'reel-06', cliente:'711 Comunicação'},
+      {n:'reel-07', cliente:'711 Comunicação'}, {n:'reel-08'}, {n:'reel-09', cliente:'711 Comunicação'},
+      {n:'reel-10', cliente:'711 Comunicação'}, {n:'reel-11', cliente:'711 Comunicação'}
+    ]
+  },
+  /* ---------- IMPRESSOS: card com capa + tipo de peça; página só com galeria ---------- */
+  {
+    slug:'calendario-h4log', cat:'impressos', cor:'roxo', galeria:true,
+    titulo:{pt:'Calendário 2027', en:'2027 Calendar', es:'Calendario 2027'},
+    cliente:'H4LOG · easy Way',
+    imgs:['capa','02',{src:'03',largo:true}]
+  },
+  {
+    slug:'display-girotto', cat:'impressos', cor:'verde', galeria:true,
+    titulo:{pt:'Display de mesa', en:'Table display', es:'Display de mesa'},
+    cliente:'Girotto Vinícola',
+    imgs:['capa','02']
+  },
+  {
+    slug:'catalogo-girotto', cat:'impressos', cor:'lilas', galeria:true, capaPos:'50% 40%',
+    titulo:{pt:'Catálogo de vinhos', en:'Wine catalog', es:'Catálogo de vinos'},
+    cliente:'Girotto Vinícola',
+    imgs:['capa','02',{src:'03',largo:true}]
+  },
+  {
+    slug:'folder-girotto', cat:'impressos', cor:'roxo', galeria:true,
+    titulo:{pt:'Folder', en:'Brochure', es:'Folleto'},
+    cliente:'Girotto Vinícola',
+    imgs:['capa','02']
+  },
+];
+
+const SERVICOS = [
+  {ic:'i-id', t:{pt:'Identidade visual', en:'Visual identity', es:'Identidad visual'},
+   d:{pt:'Marcas com conceito, do logo ao manual de aplicação.', en:'Brands built on a concept, from logo to brand guidelines.', es:'Marcas con concepto, del logo al manual de aplicación.'},
+   l:{pt:['Logo','Paleta','Tipografia','Manual de marca'], en:['Logo','Palette','Typography','Brand guide'], es:['Logo','Paleta','Tipografía','Manual de marca']}},
+  {ic:'i-post', t:{pt:'Design de posts', en:'Post design', es:'Diseño de posts'},
+   d:{pt:'Posts, carrosséis e stories com padrão visual para o seu feed.', en:'Posts, carousels and stories with a consistent look for your feed.', es:'Posts, carruseles y stories con un estándar visual para tu feed.'},
+   l:{pt:['Feed','Carrossel','Stories','Templates'], en:['Feed','Carousel','Stories','Templates'], es:['Feed','Carrusel','Stories','Plantillas']}},
+  {ic:'i-reel', t:{pt:'Edição de reels', en:'Reels editing', es:'Edición de reels'},
+   d:{pt:'Vídeos curtos com cortes dinâmicos, legendas e trilha.', en:'Short videos with dynamic cuts, captions and music.', es:'Videos cortos con cortes dinámicos, subtítulos y música.'},
+   l:{pt:['Cortes','Legendas','Trilha','Capas'], en:['Cuts','Captions','Music','Covers'], es:['Cortes','Subtítulos','Música','Portadas']}},
+  {ic:'i-print', t:{pt:'Impressos', en:'Print design', es:'Impresos'},
+   d:{pt:'Peças gráficas com arquivo fechado e pronto para a gráfica.', en:'Print pieces with final files ready for production.', es:'Piezas gráficas con archivos cerrados y listos para imprenta.'},
+   l:{pt:['Flyers','Cartazes','Cartões','Embalagens'], en:['Flyers','Posters','Cards','Packaging'], es:['Flyers','Carteles','Tarjetas','Empaques']}},
+  {ic:'i-ux', t:{pt:'UI/UX e product design', en:'UI/UX and product design', es:'UI/UX y product design'},
+   d:{pt:'Pesquisa, fluxos e interfaces para apps e sites.', en:'Research, flows and interfaces for apps and websites.', es:'Investigación, flujos e interfaces para apps y sitios web.'},
+   l:{pt:['Pesquisa','Fluxos','Wireframes','Protótipo'], en:['Research','Flows','Wireframes','Prototype'], es:['Investigación','Flujos','Wireframes','Prototipo']}}
+];
+
+const SOFTS = {
+  pt:['Colaboração em equipe','Criatividade','Organização e priorização','Pensamento crítico','Aprendizado rápido','Resolução de problemas'],
+  en:['Teamwork','Creativity','Organization and prioritization','Critical thinking','Fast learning','Problem solving'],
+  es:['Trabajo en equipo','Creatividad','Organización y priorización','Pensamiento crítico','Aprendizaje rápido','Resolución de problemas']
+};
+
+const I18N = {
+  pt:{
+    nav_inicio:'Início', nav_projetos:'Projetos', nav_sobre:'Sobre', nav_servicos:'Serviços', nav_cv:'Currículo', nav_contato:'Contato',
+    abrir_menu:'Abrir menu', filtrar:'Filtrar projetos', todos:'Todos', todos_proj:'Todos os projetos',
+    hero_ola:'olá, eu sou a',
+    hero_intro:'Gráfica e digital, com <strong>3 anos de experiência</strong> criando identidades visuais, posts, reels, impressos e interfaces. Gosto de transformar ideias em soluções visuais claras, funcionais e cheias de personalidade.',
+    btn_projetos:'Ver projetos', btn_cv:'Baixar currículo',
+    hero_balao:'Curiosa por natureza, gosto de aprender rápido e de tirar ideias do papel com propósito.',
+    selo_anos:'anos criando', alt_hero:'Ana Laura sorrindo de braços cruzados', alt_sobre:'Ana Laura sentada em um banquinho, sorrindo', alt_contato:'Retrato de Ana Laura sorrindo',
+    t_projetos:'Projetos', s_projetos:'feitos com carinho', ver_projeto:'Ver projeto',
+    t_sobre:'Sobre mim', s_sobre_foto:'prazer!',
+    sobre_lead:'Sou designer digital e estudante de Design Digital na PUC-Campinas. Atuo com design gráfico, design de posts, identidade visual e product design.',
+    sobre_txt:'Gosto de criar experiências visuais claras, funcionais e com personalidade, seja em uma marca, uma peça impressa, um post ou uma interface. Estou sempre aprendendo e pronta para transformar ideias em soluções que comunicam bem.',
+    n_anos:'anos de experiência', n_clientes:'clientes atendidos', n_exp:'experiências profissionais',
+    t_exp:'Experiência',
+    exp1_cargo:'Designer · Estágio', exp1_onde:'Softplan · nov/2025 até hoje', exp1_txt:'Peças para redes sociais, materiais de comunicação interna, páginas de site e apoio em apresentações.',
+    exp2_onde:'2024 até hoje', exp2_txt:'Identidade visual, branding, materiais impressos e carrosséis editoriais para Instagram.',
+    exp3_cargo:'Product Designer · Estágio', exp3_onde:'Instituto de Pesquisas Eldorado · jun a ago/2025', exp3_txt:'Projeto para uma das principais entidades do mercado financeiro brasileiro: pesquisas e benchmarks, imersões com o cliente, prototipação de telas e fluxos de usuário.',
+    exp4_cargo:'Estagiária de Criação', exp4_onde:'711 Comunicação · nov/2023 a mai/2025', exp4_txt:'Posts e peças impressas para mais de 5 clientes, participação em reuniões de criação, desenvolvimento de identidades visuais e captação de conteúdo.',
+    t_form:'Formação', form_curso:'Bacharelado em Design Digital', form_onde:'PUC-Campinas · 2023 a 2026',
+    t_idiomas:'Idiomas', idiomas_txt:'Português nativo<br>Inglês intermediário',
+    t_ferr:'Ferramentas', t_soft:'Como eu trabalho',
+    t_serv:'Serviços', s_serv:'bora criar?', serv_sub:'Do conceito à entrega final, para marcas que querem se comunicar com clareza e personalidade.', btn_orc:'Pedir um orçamento',
+    s_cv:'quer saber mais?', t_cv:'Meu currículo', cv_txt:'Experiências, formação, ferramentas e tudo o que eu trago para o seu time, em uma página.', btn_cv_pdf:'Baixar currículo em PDF', btn_cv_ver:'Abrir no navegador',
+    t_contato:'vamos criar juntos?', contato_txt:'Tem um projeto, uma vaga ou só quer trocar uma ideia? Me chama por qualquer um desses canais.',
+    c_email_trab:'E-mail profissional', c_email_pes:'E-mail pessoal', rodape:'Campinas, Brasil',
+    voltar:'Voltar aos projetos', f_cliente:'Cliente', f_cat:'Categoria', f_ferr:'Ferramentas', f_entrega:'Entrega',
+    e_desafio:'O desafio', e_processo:'O processo', e_resultado:'O resultado', t_passos:'Etapas do projeto',
+    t_galeria:'Galeria', f_equipe:'Equipe', reels_dica:'Clique em um reel para assistir com som', assistir:'Assistir reel', f_projeto:'Projeto', status_atual:'Em atualização', em_breve:'em breve', proximo:'Próximo projeto', ver_insta:'Ver mais no Instagram', ampliar:'Ampliar imagem',
+    marquee:['Identidade visual','Design de posts','UI/UX','Reels','Impressos','Branding']
+  },
+  en:{
+    nav_inicio:'Home', nav_projetos:'Projects', nav_sobre:'About', nav_servicos:'Services', nav_cv:'Résumé', nav_contato:'Contact',
+    abrir_menu:'Open menu', filtrar:'Filter projects', todos:'All', todos_proj:'All projects',
+    hero_ola:"hi, I'm",
+    hero_intro:'Graphic and digital designer with <strong>3 years of experience</strong> creating visual identities, posts, reels, print pieces and interfaces. I love turning ideas into visual solutions that are clear, functional and full of personality.',
+    btn_projetos:'See projects', btn_cv:'Download résumé',
+    hero_balao:'Curious by nature, I learn fast and love bringing ideas to life with purpose.',
+    selo_anos:'years creating', alt_hero:'Ana Laura smiling with arms crossed', alt_sobre:'Ana Laura sitting on a stool, smiling', alt_contato:'Portrait of Ana Laura smiling',
+    t_projetos:'Projects', s_projetos:'made with care', ver_projeto:'See project',
+    t_sobre:'About me', s_sobre_foto:'nice to meet you!',
+    sobre_lead:"I'm a digital designer and a Digital Design student at PUC-Campinas. I work with graphic design, post design, visual identity and product design.",
+    sobre_txt:"I enjoy creating visual experiences that are clear, functional and full of personality, whether it's a brand, a print piece, a post or an interface. I'm always learning and ready to turn ideas into solutions that communicate well.",
+    n_anos:'years of experience', n_clientes:'clients served', n_exp:'professional experiences',
+    t_exp:'Experience',
+    exp1_cargo:'Designer · Intern', exp1_onde:'Softplan · Nov 2025 to present', exp1_txt:'Social media pieces, internal communication materials, web pages and presentation support.',
+    exp2_onde:'2024 to present', exp2_txt:'Visual identity, branding, print materials and editorial carousels for Instagram.',
+    exp3_cargo:'Product Designer · Intern', exp3_onde:'Instituto de Pesquisas Eldorado · Jun to Aug 2025', exp3_txt:"Project for one of Brazil's leading financial market institutions: research and benchmarks, client immersions, screen prototyping and user flows.",
+    exp4_cargo:'Creative Intern', exp4_onde:'711 Comunicação · Nov 2023 to May 2025', exp4_txt:'Posts and print pieces for more than 5 clients, creative meetings, visual identity development and content production.',
+    t_form:'Education', form_curso:"Bachelor's in Digital Design", form_onde:'PUC-Campinas · 2023 to 2026',
+    t_idiomas:'Languages', idiomas_txt:'Portuguese (native)<br>English (intermediate)',
+    t_ferr:'Tools', t_soft:'How I work',
+    t_serv:'Services', s_serv:"let's create!", serv_sub:'From concept to final delivery, for brands that want to communicate with clarity and personality.', btn_orc:'Request a quote',
+    s_cv:'want to know more?', t_cv:'My résumé', cv_txt:'Experience, education, tools and everything I bring to your team, on one page.', btn_cv_pdf:'Download résumé (PDF)', btn_cv_ver:'Open in browser',
+    t_contato:"let's create together?", contato_txt:'Have a project, a job opening or just want to chat? Reach me on any of these channels.',
+    c_email_trab:'Work e-mail', c_email_pes:'Personal e-mail', rodape:'Campinas, Brazil',
+    voltar:'Back to projects', f_cliente:'Client', f_cat:'Category', f_ferr:'Tools', f_entrega:'Deliverables',
+    e_desafio:'The challenge', e_processo:'The process', e_resultado:'The result', t_passos:'Project stages',
+    t_galeria:'Gallery', f_equipe:'Team', reels_dica:'Click a reel to watch it with sound', assistir:'Watch reel', f_projeto:'Project', status_atual:'Being updated', em_breve:'coming soon', proximo:'Next project', ver_insta:'See more on Instagram', ampliar:'Enlarge image',
+    marquee:['Visual identity','Post design','UI/UX','Reels','Print','Branding']
+  },
+  es:{
+    nav_inicio:'Inicio', nav_projetos:'Proyectos', nav_sobre:'Sobre mí', nav_servicos:'Servicios', nav_cv:'Currículum', nav_contato:'Contacto',
+    abrir_menu:'Abrir menú', filtrar:'Filtrar proyectos', todos:'Todos', todos_proj:'Todos los proyectos',
+    hero_ola:'hola, soy',
+    hero_intro:'Diseñadora gráfica y digital con <strong>3 años de experiencia</strong> creando identidades visuales, posts, reels, impresos e interfaces. Me encanta transformar ideas en soluciones visuales claras, funcionales y con mucha personalidad.',
+    btn_projetos:'Ver proyectos', btn_cv:'Descargar currículum',
+    hero_balao:'Curiosa por naturaleza, aprendo rápido y me gusta llevar las ideas a la realidad con propósito.',
+    selo_anos:'años creando', alt_hero:'Ana Laura sonriendo con los brazos cruzados', alt_sobre:'Ana Laura sentada en un taburete, sonriendo', alt_contato:'Retrato de Ana Laura sonriendo',
+    t_projetos:'Proyectos', s_projetos:'hechos con cariño', ver_projeto:'Ver proyecto',
+    t_sobre:'Sobre mí', s_sobre_foto:'¡un placer!',
+    sobre_lead:'Soy diseñadora digital y estudiante de Diseño Digital en la PUC-Campinas. Trabajo con diseño gráfico, diseño de posts, identidad visual y product design.',
+    sobre_txt:'Me gusta crear experiencias visuales claras, funcionales y con personalidad, ya sea una marca, una pieza impresa, un post o una interfaz. Siempre estoy aprendiendo y lista para transformar ideas en soluciones que comunican bien.',
+    n_anos:'años de experiencia', n_clientes:'clientes atendidos', n_exp:'experiencias profesionales',
+    t_exp:'Experiencia',
+    exp1_cargo:'Diseñadora · Pasantía', exp1_onde:'Softplan · nov/2025 hasta hoy', exp1_txt:'Piezas para redes sociales, materiales de comunicación interna, páginas web y apoyo en presentaciones.',
+    exp2_onde:'2024 hasta hoy', exp2_txt:'Identidad visual, branding, materiales impresos y carruseles editoriales para Instagram.',
+    exp3_cargo:'Product Designer · Pasantía', exp3_onde:'Instituto de Pesquisas Eldorado · jun a ago/2025', exp3_txt:'Proyecto para una de las principales entidades del mercado financiero brasileño: investigaciones y benchmarks, inmersiones con el cliente, prototipado de pantallas y flujos de usuario.',
+    exp4_cargo:'Pasante de Creación', exp4_onde:'711 Comunicação · nov/2023 a may/2025', exp4_txt:'Posts y piezas impresas para más de 5 clientes, reuniones de creación, desarrollo de identidades visuales y producción de contenido.',
+    t_form:'Formación', form_curso:'Licenciatura en Diseño Digital', form_onde:'PUC-Campinas · 2023 a 2026',
+    t_idiomas:'Idiomas', idiomas_txt:'Portugués nativo<br>Inglés intermedio',
+    t_ferr:'Herramientas', t_soft:'Cómo trabajo',
+    t_serv:'Servicios', s_serv:'¡a crear!', serv_sub:'Del concepto a la entrega final, para marcas que quieren comunicarse con claridad y personalidad.', btn_orc:'Pedir un presupuesto',
+    s_cv:'¿quieres saber más?', t_cv:'Mi currículum', cv_txt:'Experiencia, formación, herramientas y todo lo que aporto a tu equipo, en una página.', btn_cv_pdf:'Descargar currículum en PDF', btn_cv_ver:'Abrir en el navegador',
+    t_contato:'¿creamos juntos?', contato_txt:'¿Tienes un proyecto, una vacante o solo quieres conversar? Escríbeme por cualquiera de estos canales.',
+    c_email_trab:'E-mail profesional', c_email_pes:'E-mail personal', rodape:'Campinas, Brasil',
+    voltar:'Volver a proyectos', f_cliente:'Cliente', f_cat:'Categoría', f_ferr:'Herramientas', f_entrega:'Entrega',
+    e_desafio:'El desafío', e_processo:'El proceso', e_resultado:'El resultado', t_passos:'Etapas del proyecto',
+    t_galeria:'Galería', f_equipe:'Equipo', reels_dica:'Haz clic en un reel para verlo con sonido', assistir:'Ver reel', f_projeto:'Proyecto', status_atual:'En actualización', em_breve:'próximamente', proximo:'Siguiente proyecto', ver_insta:'Ver más en Instagram', ampliar:'Ampliar imagen',
+    marquee:['Identidad visual','Diseño de posts','UI/UX','Reels','Impresos','Branding']
+  }
+};
+
+/* ================= lógica ================= */
+let lang = 'pt';
+try { lang = localStorage.getItem('ana-lang') || (navigator.language||'pt').slice(0,2); } catch(e){}
+if(!I18N[lang]) lang = 'pt';
+let filtro = 'todos';
+const GAL_MAX = 12;
+
+const t = k => (I18N[lang][k] ?? I18N.pt[k] ?? k);
+const tx = v => (v && typeof v === 'object' && !Array.isArray(v)) ? (v[lang] ?? v.pt) : v;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = s => document.querySelector(s);
+
+const res = u => (window.__IMG && window.__IMG[u]) || u;
+function variantes(base){ return ['jpg','png','webp'].map(e => res(`${base}.${e}`)); }
+function imgHTML(srcs, alt, lazy=true){
+  const [a,...r] = srcs;
+  return `<img src="${esc(a)}" alt="${esc(alt)}" ${lazy?'loading="lazy"':''} data-fb="${esc(r.join('|'))}" onerror="imgFalhou(this)" onload="imgOk(this)">`;
+}
+window.imgFalhou = img => {
+  const fb = img.dataset.fb ? img.dataset.fb.split('|') : [];
+  if (fb.length){ img.dataset.fb = fb.slice(1).join('|'); img.src = fb[0]; return; }
+  const p = img.parentElement; if (p) p.classList.add('ph'); img.remove();
+};
+window.imgOk = img => {
+  const g = img.closest('.gallery'); if (g) g.classList.add('has-img');
+  const c = img.parentElement; if (c && c.classList.contains('d-capa') && img.naturalWidth) c.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
+};
+function phArt(label, cor='lilas'){ return `<div class="ph-art ph-${cor}" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#burst"/></svg><span>${esc(label)}</span></div>`; }
+function capaSrcs(p){ return variantes(`img/projetos/${p.slug}/capa`); }
+function caminho(p, nome){ return res(/\.(jpe?g|png|webp|gif)$/i.test(nome) ? `img/projetos/${p.slug}/${nome}` : `img/projetos/${p.slug}/${nome}.jpg`); }
+function renderSecoes(p, titulo){
+  let n = 0;
+  return p.secoes.map(s => {
+    const num = (p.numerar && !s.semNumero) ? `<span class="num">${++n}</span>` : '';
+    const selo = s.destaque ? `<span class="tag tag-status">${esc(t('status_atual'))}</span>` : '';
+    const textos = s.texto ? tx(s.texto).map(par => `<p>${esc(par)}</p>`).join('') : '';
+    const listas = s.listas ? `<div class="listas">${s.listas.map(l => `<div class="lista"><h4>${esc(tx(l.titulo))}</h4><ul>${tx(l.itens).map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`).join('')}</div>` : '';
+    const grupos = (s.grupos||[]).map(g => `
+      ${g.sub ? `<h4 class="sub-grupo">${esc(tx(g.sub))}</h4>` : ''}
+      <div class="mosaico cols-${g.cols||2}">${g.imgs.map((im,k) => {
+        const o = typeof im === 'string' ? {src:im} : im;
+        return `<button type="button" class="zoom-btn ${o.largo?'largo':''}" aria-label="${esc(t('ampliar'))}"><img class="zoom" src="${esc(caminho(p,o.src))}" alt="${esc(titulo)} ${k+1}" loading="lazy" onerror="this.parentElement.remove()"></button>`;
+      }).join('')}</div>`).join('');
+    return `<div class="secao ${s.destaque?'destaque':''}">
+      <div class="secao-cab">${num}<h2>${esc(tx(s.titulo))}</h2>${selo}</div>
+      ${textos ? `<div class="secao-txt">${textos}</div>` : ''}${listas}${grupos}
+      ${s.botao ? `<a class="btn btn-roxo" href="${esc(s.botao.href)}">${esc(tx(s.botao.label))}</a>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderTrilho(){
+  const itens = t('marquee');
+  const um = itens.map(i => `<span>${esc(i)}</span><svg viewBox="0 0 200 200"><use href="#spark"/></svg>`).join('');
+  $('#trilho').innerHTML = um + um + um + um;
+}
+function renderMenuCats(){
+  $('#menuCats').innerHTML = `<li><a href="#projetos" data-cat="todos">${esc(t('todos_proj'))}</a></li>` +
+    Object.entries(CATS).map(([k,v]) => `<li><a href="#projetos" data-cat="${k}">${esc(tx(v))}</a></li>`).join('');
+}
+function renderFiltros(){
+  const b = [['todos', t('todos')], ...Object.entries(CATS).map(([k,v]) => [k, tx(v)])];
+  $('#filtros').innerHTML = b.map(([k,l]) => `<button data-f="${k}" aria-pressed="${k===filtro}">${esc(l)}</button>`).join('');
+}
+function renderGrade(){
+  const lista = PROJETOS.filter(p => filtro==='todos' || p.cat===filtro);
+  $('#grade').innerHTML = lista.map(p => `
+    <a class="card" href="#/projeto/${p.slug}">
+      <div class="capa">${phArt(tx(p.titulo), p.cor)}${imgHTML(capaSrcs(p), tx(p.titulo)).replace('<img ', `<img style="object-position:${p.capaPos||'50% 50%'}" `)}</div>
+      <div class="info">
+        <div class="tags"><span class="tag">${esc(tx(CATS[p.cat]))}</span>${p.status?`<span class="tag tag-status">${esc(t('status_atual'))}</span>`:''}</div>
+        <h3>${esc(tx(p.titulo))}</h3>
+        <p>${p.galeria ? `<span class="cliente-card">${esc(p.cliente)}</span>` : esc(tx(p.resumo))}</p>
+        <span class="ver">${esc(t('ver_projeto'))} <svg><use href="#seta"/></svg></span>
+      </div>
+    </a>`).join('');
+}
+function renderServ(){
+  $('#listaServ').innerHTML = SERVICOS.map(s => `
+    <article class="serv">
+      <span class="ic"><svg><use href="#${s.ic}"/></svg></span>
+      <div><h3>${esc(tx(s.t))}</h3><p>${esc(tx(s.d))}</p><ul>${tx(s.l).map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>
+    </article>`).join('');
+  $('#softs').innerHTML = SOFTS[lang].map(s => `<span>${esc(s)}</span>`).join('');
+}
+
+function renderGaleria(p, nx, titulo){
+  const imgs = p.imgs.map((im,k) => {
+    const o = typeof im === 'string' ? {src:im} : im;
+    return `<button type="button" class="zoom-btn ${o.largo?'largo':''}" aria-label="${esc(t('ampliar'))}"><img class="zoom" src="${esc(caminho(p,o.src))}" alt="${esc(titulo)}, ${esc(p.cliente)} ${k+1}" loading="lazy" onerror="this.parentElement.remove()"></button>`;
+  }).join('');
+  $('#detalhe').innerHTML = `
+    <div class="d-topo d-curto c-${p.cor}">
+      <div class="wrap">
+        <a class="voltar" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+        <div class="d-cab">
+          <div><span class="tag">${esc(tx(CATS[p.cat]))}</span><h1>${esc(titulo)}</h1><span class="script">${esc(p.cliente)}</span></div>
+          <svg class="estrela" viewBox="0 0 200 200" aria-hidden="true"><use href="#star8"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="d-corpo"><div class="wrap">
+      <div class="mosaico cols-2">${imgs}</div>
+      <div class="proximo">
+        <a class="voltar" style="color:var(--roxo)" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+        <a class="nx" href="#/projeto/${nx.slug}"><small>${esc(t('proximo'))}</small><b>${esc(tx(nx.titulo))}</b></a>
+      </div>
+    </div></div>`;
+  document.title = `${titulo} · Ana Laura Carnib`;
+}
+
+/* ---------- REELS: carrossel horizontal com prévias sem som + player com som ---------- */
+let reelsRAF = null, reelsIO = null, reelsAtual = null;
+function reelsParar(){
+  if (reelsRAF) cancelAnimationFrame(reelsRAF); reelsRAF = null;
+  if (reelsIO) reelsIO.disconnect(); reelsIO = null;
+}
+function reelSrc(p, n, tipo){ return res(`img/projetos/${p.slug}/${n}${tipo}`); }
+function renderReels(p, nx, titulo){
+  reelsParar();
+  const item = (v,k) => `
+    <figure class="reel-item">
+      <button type="button" class="reel" data-i="${k}" aria-label="${esc(t('assistir'))} ${k+1}">
+        <video muted loop playsinline preload="none" poster="${esc(reelSrc(p,v.n,'.jpg'))}" data-src="${esc(reelSrc(p,v.n,'-prev.mp4'))}"></video>
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+      </button>
+      <figcaption>${v.cliente ? `${esc(t('f_cliente'))}: ${esc(v.cliente)}` : '&nbsp;'}</figcaption>
+    </figure>`;
+  const lista = p.videos.map(item).join('');
+  $('#detalhe').innerHTML = `
+    <div class="d-topo d-curto c-${p.cor}">
+      <div class="wrap">
+        <a class="voltar" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+        <div class="d-cab">
+          <div><span class="tag">${esc(tx(CATS[p.cat]))}</span><h1>${esc(titulo)}</h1><span class="script">${esc(tx(p.frase))}</span></div>
+          <svg class="estrela" viewBox="0 0 200 200" aria-hidden="true"><use href="#star8"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="d-corpo d-reels">
+      <div class="reels-wrap" id="reelsWrap" tabindex="0" aria-label="${esc(titulo)}">
+        <div class="reels-trilho">${lista}${lista}</div>
+      </div>
+      <div class="wrap">
+        <p class="reels-dica"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>${esc(t('reels_dica'))}</p>
+        <div class="proximo">
+          <a class="voltar" style="color:var(--roxo)" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+          <a class="nx" href="#/projeto/${nx.slug}"><small>${esc(t('proximo'))}</small><b>${esc(tx(nx.titulo))}</b></a>
+        </div>
+      </div>
+    </div>`;
+  document.title = `${titulo} · Ana Laura Carnib`;
+  reelsAtual = p;
+  const wrap = $('#reelsWrap');
+  // prévias: só tocam as que estão visíveis
+  reelsIO = new IntersectionObserver(ents => ents.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting){ if (!v.src) v.src = v.dataset.src; v.play().catch(()=>{}); }
+    else v.pause();
+  }), {root: wrap, rootMargin: '0px 200px'});
+  wrap.querySelectorAll('video').forEach(v => reelsIO.observe(v));
+  // movimento contínuo na horizontal (pausa quando a pessoa interage)
+  const calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let pausado = false, retoma = null, pos = 0;
+  const pausa = () => { pausado = true; clearTimeout(retoma); };
+  const volta = () => { clearTimeout(retoma); retoma = setTimeout(() => { pausado = false; pos = wrap.scrollLeft; }, 1500); };
+  wrap.addEventListener('pointerenter', pausa); wrap.addEventListener('pointerleave', volta);
+  wrap.addEventListener('touchstart', pausa, {passive:true}); wrap.addEventListener('touchend', volta);
+  wrap.addEventListener('focusin', pausa); wrap.addEventListener('focusout', volta);
+  const passo = () => {
+    if (!document.body.contains(wrap)) return;
+    const meio = wrap.scrollWidth / 2;
+    if (!pausado && !calmo && !$('#rv').classList.contains('open')){
+      pos += 0.45; if (pos >= meio) pos -= meio;
+      wrap.scrollLeft = pos;
+    } else if (wrap.scrollLeft >= meio) { wrap.scrollLeft -= meio; pos = wrap.scrollLeft; }
+    reelsRAF = requestAnimationFrame(passo);
+  };
+  reelsRAF = requestAnimationFrame(passo);
+}
+
+/* player com som */
+let rvI = 0;
+function rvMostra(){
+  const p = reelsAtual, v = p.videos[rvI], el = $('#rvVideo');
+  el.poster = reelSrc(p, v.n, '.jpg'); el.src = reelSrc(p, v.n, '.mp4');
+  el.muted = false; el.currentTime = 0; el.play().catch(()=>{});
+  $('#rvLeg').innerHTML = `${rvI+1} / ${p.videos.length}${v.cliente ? ` · ${esc(t('f_cliente'))}: ${esc(v.cliente)}` : ''}`;
+}
+function rvAbre(i){
+  rvI = i; $('#rv').classList.add('open');
+  document.querySelectorAll('#reelsWrap video').forEach(v => v.pause());
+  rvMostra(); $('#rvX').focus();
+}
+function rvFecha(){
+  const el = $('#rvVideo'); el.pause(); el.removeAttribute('src'); el.load();
+  $('#rv').classList.remove('open');
+  document.querySelectorAll('#reelsWrap video').forEach(v => { if (v.src) v.play().catch(()=>{}); });
+}
+function rvPasso(d){ const n = reelsAtual.videos.length; rvI = (rvI + d + n) % n; rvMostra(); }
+document.addEventListener('click', e => {
+  const b = e.target.closest('.reel'); if (b) rvAbre(+b.dataset.i);
+});
+function renderDetalhe(slug){
+  const i = PROJETOS.findIndex(p => p.slug === slug);
+  if (i < 0){ location.hash = '#projetos'; return; }
+  const p = PROJETOS[i], nx = PROJETOS[(i+1) % PROJETOS.length];
+  const titulo = tx(p.titulo);
+  if (p.galeria){ renderGaleria(p, nx, titulo); return; }
+  if (p.reels){ renderReels(p, nx, titulo); return; }
+  const tiles = Array.from({length:GAL_MAX}, (_,n) => {
+    const nome = String(n+1).padStart(2,'0');
+    return `<button class="tile" type="button" aria-label="${esc(t('ampliar'))}">${phArt(t('em_breve'))}${imgHTML(variantes(`img/projetos/${p.slug}/${nome}`), `${titulo} ${n+1}`)}</button>`;
+  }).join('');
+  const passos = p.passos ? `<div class="passos"><h3>${esc(t('t_passos'))}</h3><div class="chips">${tx(p.passos).map(s=>`<span>${esc(s)}</span>`).join('')}</div></div>` : '';
+  const link = p.link ? `<div class="links-proj"><a class="btn btn-roxo" href="${esc(p.link)}" target="_blank" rel="noopener"><svg><use href="#insta"/></svg>${esc(t('ver_insta'))}</a></div>` : '';
+  $('#detalhe').innerHTML = `
+    <div class="d-topo c-${p.cor}">
+      <div class="wrap">
+        <a class="voltar" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+        <div class="d-cab">
+          <div><span class="tag">${esc(tx(CATS[p.cat]))}</span>${p.status?` <span class="tag tag-status">${esc(t('status_atual'))}</span>`:''}<h1>${esc(titulo)}</h1><span class="script">${esc(tx(p.frase))}</span></div>
+          <svg class="estrela" viewBox="0 0 200 200" aria-hidden="true"><use href="#star8"/></svg>
+        </div>
+        <div class="d-capa">${phArt(titulo, {roxo:'lilas',verde:'verde',lilas:'roxo'}[p.cor])}${imgHTML(capaSrcs(p), titulo, false)}</div>
+      </div>
+    </div>
+    <div class="d-corpo"><div class="wrap">
+      <dl class="ficha">
+        <div><dt>${esc(t('f_cliente'))}</dt><dd>${esc(tx(p.cliente))}</dd></div>
+        <div><dt>${esc(t('f_cat'))}</dt><dd>${esc(tx(CATS[p.cat]))}</dd></div>
+        ${p.ferramentas ? `<div><dt>${esc(t('f_ferr'))}</dt><dd>${esc(p.ferramentas)}</dd></div>` : ''}
+        <div><dt>${esc(t('f_entrega'))}</dt><dd>${esc(tx(p.entrega))}</dd></div>
+        ${p.equipe?`<div><dt>${esc(t('f_equipe'))}</dt><dd>${esc(p.equipe)}</dd></div>`:''}
+        ${p.projeto?`<div><dt>${esc(t('f_projeto'))}</dt><dd>${esc(tx(p.projeto))}</dd></div>`:''}
+      </dl>
+      <p class="d-resumo">${esc(tx(p.resumo))}</p>
+      <div class="etapas">
+        <div class="etapa"><h3>${esc(t('e_desafio'))}</h3><p>${esc(tx(p.desafio))}</p></div>
+        <div class="etapa"><h3>${esc(t('e_processo'))}</h3><p>${esc(tx(p.processo))}</p></div>
+        <div class="etapa"><h3>${esc(t('e_resultado'))}</h3><p>${esc(tx(p.resultado))}</p></div>
+      </div>
+      ${passos}
+      ${p.secoes ? renderSecoes(p, titulo) : `<h2 class="galeria-tit">${esc(t('t_galeria'))}</h2>
+      <div class="gallery ${p.vertical?'vertical':''}" id="gal">${tiles}</div>`}
+      ${link}
+      <div class="proximo">
+        <a class="voltar" style="color:var(--roxo)" href="#projetos"><svg><use href="#volta"/></svg>${esc(t('voltar'))}</a>
+        <a class="nx" href="#/projeto/${nx.slug}"><small>${esc(t('proximo'))}</small><b>${esc(tx(nx.titulo))}</b></a>
+      </div>
+    </div></div>`;
+  document.title = `${titulo} · Ana Laura Carnib`;
+}
+
+function aplicarIdioma(){
+  document.documentElement.lang = {pt:'pt-BR', en:'en', es:'es'}[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => el.setAttribute('alt', t(el.dataset.i18nAlt)));
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  renderTrilho(); renderMenuCats(); renderFiltros(); renderGrade(); renderServ();
+  rota(true);
+}
+
+/* Navegação feita pelo próprio script: funciona no GitHub Pages, aberto direto do computador
+   e dentro de visualizadores que bloqueiam a troca de endereço. */
+let rotaAtual = location.hash || '';
+function navegar(hash){
+  rotaAtual = hash;
+  try { if (location.hash !== hash) history.pushState(null, '', hash); } catch(e){}
+  rota(false);
+}
+function rota(semScroll){
+  reelsParar(); if ($('#rv') && $('#rv').classList.contains('open')) rvFecha();
+  const h = rotaAtual;
+  const m = h.match(/^#\/projeto\/([\w-]+)/);
+  if (m){
+    document.body.classList.add('vendo-projeto');
+    renderDetalhe(m[1]);
+    if (!semScroll) window.scrollTo(0,0);
+  } else {
+    const estava = document.body.classList.contains('vendo-projeto');
+    document.body.classList.remove('vendo-projeto');
+    document.title = 'Ana Laura Carvalho Carnib · Designer';
+    if (!semScroll || estava){
+      const el = h ? document.getElementById(h.slice(1)) : null;
+      if (el) requestAnimationFrame(() => el.scrollIntoView({behavior: estava ? 'auto' : 'smooth'})); else if (estava || !h) window.scrollTo(0,0);
+    }
+  }
+}
+
+/* eventos */
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+  lang = b.dataset.lang; try { localStorage.setItem('ana-lang', lang); } catch(e){}
+  aplicarIdioma();
+}));
+$('#filtros').addEventListener('click', e => {
+  const b = e.target.closest('button[data-f]'); if (!b) return;
+  filtro = b.dataset.f; renderFiltros(); renderGrade();
+});
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  e.preventDefault();
+  if (a.dataset.cat){ filtro = a.dataset.cat; renderFiltros(); renderGrade(); }
+  fecharMenu(); $('#subProj').classList.remove('open');
+  navegar(a.getAttribute('href'));
+});
+const burger = $('#burger'), nav = $('#nav');
+function fecharMenu(){ nav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+$('#btnProj').addEventListener('click', () => { const o = $('#subProj').classList.toggle('open'); $('#btnProj').setAttribute('aria-expanded', o); });
+window.addEventListener('popstate', () => { rotaAtual = location.hash || ''; rota(false); });
+window.addEventListener('hashchange', () => { if (location.hash !== rotaAtual){ rotaAtual = location.hash; rota(false); } });
+
+/* lightbox */
+const lb = $('#lb'), lbImg = $('#lbImg'); let lbLista = [], lbI = 0;
+function lbMostra(){ lbImg.src = lbLista[lbI].src; lbImg.alt = lbLista[lbI].alt; }
+$('#detalhe').addEventListener('click', e => {
+  const tile = e.target.closest('.tile, .zoom-btn'); if (!tile || tile.classList.contains('ph')) return;
+  lbLista = [...document.querySelectorAll('#gal .tile:not(.ph) img, #detalhe img.zoom')];
+  lbI = lbLista.indexOf(tile.querySelector('img')); if (lbI < 0) return;
+  lbMostra(); lb.classList.add('open'); $('#lbX').focus();
+});
+const lbFecha = () => lb.classList.remove('open');
+$('#lbX').onclick = lbFecha;
+$('#lbA').onclick = () => { lbI = (lbI - 1 + lbLista.length) % lbLista.length; lbMostra(); };
+$('#lbP').onclick = () => { lbI = (lbI + 1) % lbLista.length; lbMostra(); };
+lb.addEventListener('click', e => { if (e.target === lb) lbFecha(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') lbFecha();
+  if (e.key === 'ArrowLeft') $('#lbA').click();
+  if (e.key === 'ArrowRight') $('#lbP').click();
+});
+
+$('#rvX').onclick = rvFecha;
+$('#rvA').onclick = () => rvPasso(-1);
+$('#rvP').onclick = () => rvPasso(1);
+$('#rvVideo').addEventListener('ended', () => rvPasso(1));
+$('#rv').addEventListener('click', e => { if (e.target.id === 'rv') rvFecha(); });
+document.addEventListener('keydown', e => {
+  if (!$('#rv').classList.contains('open')) return;
+  if (e.key === 'Escape') rvFecha();
+  if (e.key === 'ArrowLeft') rvPasso(-1);
+  if (e.key === 'ArrowRight') rvPasso(1);
+});
+$('#ano').textContent = new Date().getFullYear();
+aplicarIdioma();
+if (/^#\/projeto\//.test(location.hash)) window.scrollTo(0,0);
+</script>
+</body>
+</html>
